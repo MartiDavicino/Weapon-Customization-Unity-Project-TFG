@@ -24,7 +24,7 @@ RenderSettings:
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 4
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 2158.7695, g: 2262.4941, b: 3284.5625, a: 1}
+  m_IndirectSpecularColor: {r: 2169.2676, g: 2283.082, b: 3342.5469, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -466,14 +466,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1823688464}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 36}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!114 &1823688468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -629,11 +629,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bodyParts:
-  - {fileID: 919132149155446097, guid: faa800ce03d364d45969536337d2baa8, type: 3}
-  - {fileID: 919132149155446097, guid: 5144b7ce76c0ce044bebdf18b7d5a7ab, type: 3}
-  - {fileID: 919132149155446097, guid: 0d09b7320992bc1418902502b9ab4b8a, type: 3}
-  stockParts: []
-  magazineParts: []
+  - {fileID: 774119902316997918, guid: 3c1d75e7b554e024d837690e8cedd690, type: 3}
+  - {fileID: 3887254961135721729, guid: 27dcc026114fa7049b00eb7e4950bc4e, type: 3}
+  - {fileID: 6386721894991290322, guid: b6a347cdd4aeaaf4c98a98ed9812c350, type: 3}
+  stockParts:
+  - {fileID: 919132149155446097, guid: b3b6f114e98285b40a8c3d42b32ba558, type: 3}
+  - {fileID: 919132149155446097, guid: 52163eec59e821746a9bab7064b9871a, type: 3}
+  - {fileID: 919132149155446097, guid: dd278c1a374d55842a3799203cbbee81, type: 3}
+  - {fileID: 919132149155446097, guid: 9fff7c685870ffe43bc8e2a60be49b56, type: 3}
+  magazineParts:
+  - {fileID: 919132149155446097, guid: afe01dcfc0c7e68469bc316bd5c2d033, type: 3}
+  - {fileID: 919132149155446097, guid: c878dd3add649a04eaae21af0f94c574, type: 3}
+  - {fileID: 919132149155446097, guid: cce38da7ebccb1d4a88cdfe25a8c5375, type: 3}
   gripParts:
   - {fileID: 919132149155446097, guid: 6964b8988eee86e4daa34695421e37c5, type: 3}
   - {fileID: 919132149155446097, guid: d71aaeaceebd28045ac2472040f77cff, type: 3}
@@ -641,10 +648,22 @@ MonoBehaviour:
   - {fileID: 919132149155446097, guid: 998a2869b78c55e46b3d8497296040a5, type: 3}
   - {fileID: 919132149155446097, guid: aad11bf8626198747a99bc11eec259cb, type: 3}
   foregripParts: []
-  barrelParts: []
-  handguardParts: []
-  muzzleParts: []
-  scopeParts: []
+  barrelParts:
+  - {fileID: 919132149155446097, guid: 72ca55397bdb82f43a6a3152ed382483, type: 3}
+  - {fileID: 919132149155446097, guid: c1bebbc4518874d45af7f30439e0f6f4, type: 3}
+  - {fileID: 919132149155446097, guid: 4eab92a44d1448c4882d0726b10721b6, type: 3}
+  handguardParts:
+  - {fileID: 919132149155446097, guid: f8c291875b697a5449acecbb7e078d48, type: 3}
+  - {fileID: 919132149155446097, guid: 65471ce0b0ab1ed458f623fcb67f59e4, type: 3}
+  - {fileID: 919132149155446097, guid: 17520975943d01c41b405bd5534cddcf, type: 3}
+  muzzleParts:
+  - {fileID: 919132149155446097, guid: 5f5d7200e48dc364795e1289d7f0abbc, type: 3}
+  - {fileID: 919132149155446097, guid: e67fa043eb2e3e744a15bb7a2c3b8636, type: 3}
+  - {fileID: 919132149155446097, guid: 24c2019c4be874e4195fb072bf43883d, type: 3}
+  scopeParts:
+  - {fileID: 919132149155446097, guid: bc78b1703376fd34790b5c904f5b2e76, type: 3}
+  - {fileID: 919132149155446097, guid: fc99c31a60d5e524a9ad9325e093f1c2, type: 3}
+  - {fileID: 919132149155446097, guid: 3c45d5f6ccbb0e446a01aab8f4714525, type: 3}
 --- !u!4 &1894474046
 Transform:
   m_ObjectHideFlags: 0
