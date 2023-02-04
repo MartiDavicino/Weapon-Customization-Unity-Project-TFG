@@ -225,7 +225,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f34f557a07519040b22f37a1ce24e77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 0
+  type: 1
+  gripType: 0
+  useStock: 1
+  useHandguard: 1
+  useBarrel: 1
   handguardSocket: {fileID: 6995450996404177921}
   gripSocket: {fileID: 783662512617867134}
   stockSocket: {fileID: 7736838555971597454}

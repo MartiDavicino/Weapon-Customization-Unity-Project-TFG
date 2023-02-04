@@ -42,9 +42,7 @@ public class WeaponGenerator : MonoBehaviour
 
     private void GenerateNewWeapon()
     {
-        Debug.Log("Generating new weapon");
         
-
         //Body
         GameObject randomBody = GetRandomPart(bodyParts);
         GameObject instantiatedBody=Instantiate(randomBody);
@@ -73,7 +71,6 @@ public class WeaponGenerator : MonoBehaviour
         }
     }
 
-
     void SpawnPart(List<GameObject> parts,Transform socket)
     {
         GameObject randomPart=GetRandomPart(parts);
@@ -87,10 +84,13 @@ public class WeaponGenerator : MonoBehaviour
 
         if (type == WeaponType.BULLPUP)
         {
+            Debug.Log("Should use simple grip");
             //only simple grips
 
             while (randomPart.GetComponent<Grip>().type != GripType.SIMPLE)
             {
+                Debug.Log("Searching for simple grip");
+
                 randomPart = GetRandomPart(parts);
             }
 
