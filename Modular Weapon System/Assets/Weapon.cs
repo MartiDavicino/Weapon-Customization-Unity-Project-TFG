@@ -5,12 +5,22 @@ using UnityEngine;
 
 public enum WeaponType
 {
-    BULLPUP,
-    NON_BULLPUP
+    NON_BULLPUP,
+    BULLPUP
+    
 }
 public class Weapon : MonoBehaviour
 {
     public WeaponType type;
+
+    public GripType gripType;
+    [HideInInspector]
+    public bool useStock = true;
+    [HideInInspector]
+    public bool useHandguard = true;
+    [HideInInspector]
+    public bool useBarrel = true;
+
     public Transform handguardSocket;
     //We dont use barrel and muzzle socket because its attached to handguard
     public Transform gripSocket;
@@ -18,15 +28,4 @@ public class Weapon : MonoBehaviour
     public Transform magazineSocket;
     public Transform scopeSocket;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

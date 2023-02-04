@@ -5,7 +5,11 @@ using UnityEngine;
 
 public class WeaponGenerator : MonoBehaviour
 {
+    Weapon currentWeapon = null;
+
     GameObject previousWeapon = null;
+    private Handguard currentHandguard = null;
+    private Barrel currentBarrel = null;
 
     public List<GameObject> bodyParts;
 
@@ -39,23 +43,24 @@ public class WeaponGenerator : MonoBehaviour
     private void GenerateNewWeapon()
     {
         Debug.Log("Generating new weapon");
-        //GameObject weapon = new GameObject();
-        //List<GameObject> weaponParts = new List<GameObject>();
+        
 
         //Body
         GameObject randomBody = GetRandomPart(bodyParts);
         GameObject instantiatedBody=Instantiate(randomBody);
-        Weapon weaponbody=instantiatedBody.GetComponent<Weapon>();
+        currentWeapon=instantiatedBody.GetComponent<Weapon>();
 
-        SpawnPart(stockParts, weaponbody.stockSocket);
-        SpawnPart(gripParts, weaponbody.gripSocket);
-        SpawnPart(magazineParts, weaponbody.magazineSocket);
-        SpawnPart(handguardParts, weaponbody.handguardSocket);
-        SpawnPart(scopeParts, weaponbody.scopeSocket);
+        SpawnPart(magazineParts, currentWeapon.magazineSocket);
+        SpawnPart(scopeParts, currentWeapon.scopeSocket);
 
-        //SpawnPart(barrelParts, );
+        SpawnGrip(gripParts, currentWeapon.gripSocket,currentWeapon.type);
+        if(currentWeapon.useStock)SpawnPart(stockParts, currentWeapon.stockSocket);
 
-        //SpawnPart(muzzleParts, );
+        SpawnHandguard(handguardParts, currentWeapon.handguardSocket);
+
+        SpawnBarrel(barrelParts);
+        SpawnMuzzle(muzzleParts);
+
 
         previousWeapon = instantiatedBody;
     }
@@ -76,6 +81,61 @@ public class WeaponGenerator : MonoBehaviour
         instantiatedPart.transform.parent = socket;
     }
 
+    void SpawnGrip(List<GameObject> parts, Transform socket, WeaponType type)
+    {
+        GameObject randomPart = GetRandomPart(parts);
+
+        if (type == WeaponType.BULLPUP)
+        {
+            //only simple grips
+
+            while (randomPart.GetComponent<Grip>().type != GripType.SIMPLE)
+            {
+                randomPart = GetRandomPart(parts);
+            }
+
+        }
+
+
+        GameObject instantiatedPart = Instantiate(randomPart, socket.position, socket.rotation);
+        instantiatedPart.transform.parent = socket;
+
+        if (randomPart.GetComponent<Grip>().type == GripType.STOCK || randomPart.GetComponent<Grip>().type == GripType.INTEGRED)
+            currentWeapon.useStock = false;
+
+    }
+
+    void SpawnHandguard(List<GameObject> parts, Transform socket)
+    {
+        GameObject randomPart = GetRandomPart(parts);
+
+        GameObject instantiatedPart = Instantiate(randomPart, socket.position, socket.rotation);
+        instantiatedPart.transform.parent = socket;
+
+        currentHandguard = instantiatedPart.GetComponent<Handguard>();
+
+    }
+
+    void SpawnBarrel(List<GameObject> parts)
+    {
+        GameObject randomPart = GetRandomPart(parts);
+        Transform socket = currentHandguard.barrelSocket;
+
+        GameObject instantiatedPart = Instantiate(randomPart, socket.position, socket.rotation);
+        instantiatedPart.transform.parent = currentWeapon.transform;
+
+        currentBarrel = instantiatedPart.GetComponent<Barrel>();
+
+    }
+
+    void SpawnMuzzle(List<GameObject> parts)
+    {
+        GameObject randomPart = GetRandomPart(parts);
+        Transform socket = currentBarrel.muzzleSocket;
+
+        GameObject instantiatedPart = Instantiate(randomPart, socket.position, socket.rotation);
+        instantiatedPart.transform.parent = currentWeapon.transform;
+    }
     GameObject GetRandomPart(List <GameObject> partsList)
     {
         int randomNumber= UnityEngine.Random.Range(0,partsList.Count);

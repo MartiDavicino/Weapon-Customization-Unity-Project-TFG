@@ -24,7 +24,7 @@ RenderSettings:
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 4
+  m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 2169.2676, g: 2283.082, b: 3342.5469, a: 1}
+  m_IndirectSpecularColor: {r: 2159.8516, g: 2263.4707, b: 3285.3594, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -633,7 +633,6 @@ MonoBehaviour:
   - {fileID: 3887254961135721729, guid: 27dcc026114fa7049b00eb7e4950bc4e, type: 3}
   - {fileID: 6386721894991290322, guid: b6a347cdd4aeaaf4c98a98ed9812c350, type: 3}
   stockParts:
-  - {fileID: 919132149155446097, guid: b3b6f114e98285b40a8c3d42b32ba558, type: 3}
   - {fileID: 919132149155446097, guid: 52163eec59e821746a9bab7064b9871a, type: 3}
   - {fileID: 919132149155446097, guid: dd278c1a374d55842a3799203cbbee81, type: 3}
   - {fileID: 919132149155446097, guid: 9fff7c685870ffe43bc8e2a60be49b56, type: 3}
@@ -642,20 +641,21 @@ MonoBehaviour:
   - {fileID: 919132149155446097, guid: c878dd3add649a04eaae21af0f94c574, type: 3}
   - {fileID: 919132149155446097, guid: cce38da7ebccb1d4a88cdfe25a8c5375, type: 3}
   gripParts:
-  - {fileID: 919132149155446097, guid: 6964b8988eee86e4daa34695421e37c5, type: 3}
-  - {fileID: 919132149155446097, guid: d71aaeaceebd28045ac2472040f77cff, type: 3}
-  - {fileID: 919132149155446097, guid: ed2c451b163fc6b43b135df823488c1b, type: 3}
-  - {fileID: 919132149155446097, guid: 998a2869b78c55e46b3d8497296040a5, type: 3}
-  - {fileID: 919132149155446097, guid: aad11bf8626198747a99bc11eec259cb, type: 3}
+  - {fileID: 38666162604136656, guid: 81bd00eb3b36b7c45bdadbce17b48fdf, type: 3}
+  - {fileID: 2854265490776095979, guid: 6154095a3a8ac44439d0389ab1d63090, type: 3}
+  - {fileID: 6000039308682765083, guid: ace83833d25598f4d9afaeb3fa34ce06, type: 3}
+  - {fileID: 1722853702877289810, guid: 45c9868222c4c724e9a27c167d7a9690, type: 3}
+  - {fileID: 4304915078219051886, guid: 9a585882f38da014cbf9a2d4b21ca360, type: 3}
+  - {fileID: 4014559756527794419, guid: bcb101ce260e33549a1e506a815ddea2, type: 3}
   foregripParts: []
   barrelParts:
-  - {fileID: 919132149155446097, guid: 72ca55397bdb82f43a6a3152ed382483, type: 3}
-  - {fileID: 919132149155446097, guid: c1bebbc4518874d45af7f30439e0f6f4, type: 3}
-  - {fileID: 919132149155446097, guid: 4eab92a44d1448c4882d0726b10721b6, type: 3}
+  - {fileID: 1606937335481820199, guid: 57617ab2141fe944ba0bc3d2b7735731, type: 3}
+  - {fileID: 4880820751112983834, guid: 1c8ae6bf31299c040834f43347f1540e, type: 3}
+  - {fileID: 798739133607395716, guid: 73630690d7e44584bb5f341263a9ceb4, type: 3}
   handguardParts:
-  - {fileID: 919132149155446097, guid: f8c291875b697a5449acecbb7e078d48, type: 3}
-  - {fileID: 919132149155446097, guid: 65471ce0b0ab1ed458f623fcb67f59e4, type: 3}
-  - {fileID: 919132149155446097, guid: 17520975943d01c41b405bd5534cddcf, type: 3}
+  - {fileID: 5594248197840667220, guid: de43d5059c71c7d449da6665f1c60f29, type: 3}
+  - {fileID: 7042788883416975983, guid: 6f77d07ae01e07547b74980a5179e44b, type: 3}
+  - {fileID: 5545384961040081421, guid: 69ab6ee9d29aec846a9d3fe8de71e690, type: 3}
   muzzleParts:
   - {fileID: 919132149155446097, guid: 5f5d7200e48dc364795e1289d7f0abbc, type: 3}
   - {fileID: 919132149155446097, guid: e67fa043eb2e3e744a15bb7a2c3b8636, type: 3}
