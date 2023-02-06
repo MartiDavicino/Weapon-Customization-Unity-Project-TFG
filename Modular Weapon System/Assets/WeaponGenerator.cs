@@ -27,7 +27,7 @@ public class WeaponGenerator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        GenerateNewWeapon();
     }
 
     // Update is called once per frame
@@ -35,12 +35,17 @@ public class WeaponGenerator : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            DestroyCurrentWeapon();
             GenerateNewWeapon();
         }
     }
 
-    private void GenerateNewWeapon()
+    public void GenerateNewWeapon()
+    {
+        DestroyCurrentWeapon();
+        SpawnWeaponParts();
+    }
+
+    private void SpawnWeaponParts()
     {
         
         //Body
@@ -84,16 +89,10 @@ public class WeaponGenerator : MonoBehaviour
 
         if (type == WeaponType.BULLPUP)
         {
-            Debug.Log("Should use simple grip");
-            //only simple grips
-
             while (randomPart.GetComponent<Grip>().type != GripType.SIMPLE)
             {
-                Debug.Log("Searching for simple grip");
-
                 randomPart = GetRandomPart(parts);
             }
-
         }
 
 
