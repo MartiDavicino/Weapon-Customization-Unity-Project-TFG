@@ -165,9 +165,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   gripType: 0
-  useStock: 1
-  useHandguard: 1
-  useBarrel: 1
+  useStock: 0
+  useHandguard: 0
+  useBarrel: 0
+  useMuzzle: 0
+  useHandguardAttachment: 0
+  useBarrelAttachment: 0
+  useScope: 0
   handguardSocket: {fileID: 7457747620521069341}
   gripSocket: {fileID: 8732249929638508432}
   stockSocket: {fileID: 8476792122979041365}

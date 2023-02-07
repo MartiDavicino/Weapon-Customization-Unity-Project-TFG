@@ -33,9 +33,9 @@ public class WeaponGenerator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.C))
         {
-            GenerateNewWeapon();
+            GenerateCollection();
         }
     }
 
@@ -43,6 +43,28 @@ public class WeaponGenerator : MonoBehaviour
     {
         DestroyCurrentWeapon();
         SpawnWeaponParts();
+    }
+
+    [Obsolete]
+    public void GenerateCollection()
+    {
+        int rows, columns;
+        rows = 5;
+        columns = 5;
+
+        Vector3 pos=new Vector2(0,0);
+        Vector2 increment=new Vector2(200,100);
+
+        for(int i = 0; i < rows; i++)
+        {
+            pos.x+=increment.x;
+            for(i = 0; i < columns; i++)
+            {
+                pos.y+=increment.y;
+
+                SpawnWeaponParts();
+            }
+        }
     }
 
     private void SpawnWeaponParts()
@@ -54,15 +76,14 @@ public class WeaponGenerator : MonoBehaviour
         currentWeapon=instantiatedBody.GetComponent<Weapon>();
 
         SpawnPart(magazineParts, currentWeapon.magazineSocket);
-        SpawnPart(scopeParts, currentWeapon.scopeSocket);
+        if(currentWeapon.UsePart(WeaponPart.SCOPE)) SpawnPart(scopeParts, currentWeapon.scopeSocket);
 
         SpawnGrip(gripParts, currentWeapon.gripSocket,currentWeapon.type);
-        if(currentWeapon.useStock)SpawnPart(stockParts, currentWeapon.stockSocket);
+        if(currentWeapon.UsePart(WeaponPart.STOCK))SpawnPart(stockParts, currentWeapon.stockSocket);
 
-        SpawnHandguard(handguardParts, currentWeapon.handguardSocket);
-
-        SpawnBarrel(barrelParts);
-        SpawnMuzzle(muzzleParts);
+        if (currentWeapon.UsePart(WeaponPart.HANDGUARD)) SpawnHandguard(handguardParts, currentWeapon.handguardSocket);
+        if (currentWeapon.UsePart(WeaponPart.BARREL)) SpawnBarrel(barrelParts);
+        if (currentWeapon.UsePart(WeaponPart.MUZZLE)) SpawnMuzzle(muzzleParts);
 
 
         previousWeapon = instantiatedBody;
@@ -100,7 +121,7 @@ public class WeaponGenerator : MonoBehaviour
         instantiatedPart.transform.parent = socket;
 
         if (randomPart.GetComponent<Grip>().type == GripType.STOCK || randomPart.GetComponent<Grip>().type == GripType.INTEGRED)
-            currentWeapon.useStock = false;
+              currentWeapon.useStock = false;
 
     }
 
@@ -118,7 +139,11 @@ public class WeaponGenerator : MonoBehaviour
     void SpawnBarrel(List<GameObject> parts)
     {
         GameObject randomPart = GetRandomPart(parts);
-        Transform socket = currentHandguard.barrelSocket;
+        Transform socket;
+        if (currentWeapon.useHandguard)
+            socket = currentHandguard.barrelSocket;
+        else
+            socket = currentWeapon.handguardSocket;
 
         GameObject instantiatedPart = Instantiate(randomPart, socket.position, socket.rotation);
         instantiatedPart.transform.parent = currentWeapon.transform;
@@ -130,7 +155,13 @@ public class WeaponGenerator : MonoBehaviour
     void SpawnMuzzle(List<GameObject> parts)
     {
         GameObject randomPart = GetRandomPart(parts);
-        Transform socket = currentBarrel.muzzleSocket;
+        Transform socket;
+        if (currentWeapon.useMuzzle)
+            socket = currentBarrel.muzzleSocket;
+        else if(currentWeapon.useHandguard)
+            socket = currentHandguard.barrelSocket;
+        else
+            socket=currentWeapon.handguardSocket;
 
         GameObject instantiatedPart = Instantiate(randomPart, socket.position, socket.rotation);
         instantiatedPart.transform.parent = currentWeapon.transform;
