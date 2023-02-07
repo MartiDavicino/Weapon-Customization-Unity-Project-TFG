@@ -25,7 +25,7 @@ public class Weapon : MonoBehaviour
     [HideInInspector]
     public GripType gripType;
     //[HideInInspector]
-    public bool useStock, useHandguard, useBarrel,useMuzzle,useHandguardAttachment,useBarrelAttachment,useScope = false;
+    public bool useStock,useComplexGrip,useHandguard, useBarrel,useMuzzle,useHandguardAttachment,useBarrelAttachment,useScope = false;
 
     //float stockProabability = 0.9f;
     //float handguardProbability=0.7f;
@@ -37,11 +37,11 @@ public class Weapon : MonoBehaviour
 
     float stockProabability = .8f;
     float handguardProbability = 0.5f;
-    float barrelProbability = 0.9f;
-    float muzzleProbability = 0.5f;
+    float barrelProbability = .7f;
+    float muzzleProbability = .5f;
     float handguardAttachmentProbability = 1f;
     float barrelAttachmnetProbability = 1f;
-    float scopeProbability = 0.5f;
+    float scopeProbability = 0.65f;
 
 
     public Transform handguardSocket;
