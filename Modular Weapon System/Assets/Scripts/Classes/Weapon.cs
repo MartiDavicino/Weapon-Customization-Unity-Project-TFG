@@ -11,7 +11,9 @@ public enum WeaponType
 }
 public enum WeaponPart
 {
+    GRIP,
     STOCK,
+    MAGAZINE,
     HANDGUARD,
     BARREL,
     MUZZLE,
@@ -35,13 +37,22 @@ public class Weapon : MonoBehaviour
     //float barrelAttachmnetProbability = 0.1f;
     //float scopeProbability = 0.75f;
 
-    float stockProabability = .8f;
-    float handguardProbability = 0.5f;
-    float barrelProbability = .7f;
-    float muzzleProbability = .5f;
+    //float stockProabability = .8f;
+    //float handguardProbability = 0.5f;
+    //float barrelProbability = .7f;
+    //float muzzleProbability = .5f;
+    //float handguardAttachmentProbability = 1f;
+    //float barrelAttachmnetProbability = 1f;
+    //float scopeProbability = 0.65f;
+
+    float stockProabability =1f;
+    float handguardProbability =1f;
+    float barrelProbability =1f;
+    float muzzleProbability =1f;
     float handguardAttachmentProbability = 1f;
     float barrelAttachmnetProbability = 1f;
-    float scopeProbability = 0.65f;
+    float scopeProbability =1f;
+    float complexGripProbabilkity = .5f;
 
 
     public Transform handguardSocket;
@@ -59,6 +70,13 @@ public class Weapon : MonoBehaviour
 
         switch(part)
         {
+            case WeaponPart.GRIP:
+                if (ran <= complexGripProbabilkity)
+                {
+                    useComplexGrip  = true;
+                    ret = true;
+                }
+                break;
             case WeaponPart.STOCK:
                 if (ran <= stockProabability)
                 {
