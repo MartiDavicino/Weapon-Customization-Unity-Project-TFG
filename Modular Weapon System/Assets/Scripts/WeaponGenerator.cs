@@ -116,7 +116,7 @@ public class WeaponGenerator : MonoBehaviour
         previousWeapon = instantiatedBody;
         return instantiatedBody;
     }
-    void SpawnPart(WeaponPart weaponPart,List<GameObject> parts,Transform socket)
+    GameObject SpawnPart(WeaponPart weaponPart,List<GameObject> parts,Transform socket)
     {
         GameObject randomPart=GetRandomPart(parts);
         GameObject instantiatedPart = null;
@@ -189,18 +189,20 @@ public class WeaponGenerator : MonoBehaviour
 
         }
 
-        
+        return instantiatedPart;
     }
     void SpawnMagazine()
     {
         SpawnPart(WeaponPart.MAGAZINE, magazineParts, currentWeapon.magazineSocket);
     }
-    void SpawnScope()
+    GameObject SpawnScope()
     {
         if (currentWeapon.UsePart(WeaponPart.SCOPE))
         {
-            SpawnPart(WeaponPart.SCOPE, scopeParts, currentWeapon.scopeSocket);
+            return SpawnPart(WeaponPart.SCOPE, scopeParts, currentWeapon.scopeSocket);
         }
+        else
+            return null;
     }
     void SpawnStock()
     {
@@ -272,9 +274,23 @@ public class WeaponGenerator : MonoBehaviour
     {
         if (currentScope != null)
         {
-            Destroy(currentScope);
-            SpawnScope();
+
+            GameObject newScope = SpawnScope();
+
+
+            if (!CheckIfPartIsDifferent(currentScope, newScope))
+            {
+                //Parts are the same so we need to respawn a new one till they are different
+                Debug.Log("Retry spawning scope");
+                //Crash
+                //ChangeScope();
+            }
+
+            currentScope = newScope;
+            Destroy(newScope);
         }
+        else
+            Debug.Log("Scope is null");
 
     }
     public void ChangeMagazine()
@@ -349,12 +365,28 @@ public class WeaponGenerator : MonoBehaviour
             
         }
     }
-
     public void ChangeBody()
     {
         if (currentWeapon != null)
         {
             
         }
+    }
+
+    bool CheckIfPartIsDifferent(GameObject currentObject,GameObject newObject)
+    {
+        bool ret = true;
+
+        if (currentObject == newObject) 
+        {
+            //Debug.Log("Objects are the same " + currentObject + " " + newObject);
+            ret = false;
+        }
+        else
+        {
+            //Debug.Log("Objects are the NOT the same " + currentObject + " " + newObject);
+        }
+
+        return ret;
     }
 }
