@@ -252,6 +252,7 @@ public class WeaponGenerator : MonoBehaviour
         }
 
     }
+
     GameObject GetRandomPart(List <GameObject> partsList)
     {
         int randomNumber= UnityEngine.Random.Range(0,partsList.Count);
@@ -305,22 +306,47 @@ public class WeaponGenerator : MonoBehaviour
     {
         if (currentBarrel != null)
         {
-            GameObject storeMuzzle = currentMuzzle;
+            if(currentMuzzle!= null)
+            {
+                currentMuzzle.transform.parent = GameObject.Find("Weapon Generator").transform.parent;
+            }
+
             Destroy(currentBarrel);
             SpawnBarrel();
 
-            currentMuzzle=Instantiate(storeMuzzle, currentBarrel.GetComponent<Barrel>().muzzleSocket.transform.position, currentBarrel.GetComponent<Barrel>().muzzleSocket.transform.rotation);
-            currentMuzzle.transform.parent = currentMuzzle.transform;
+            if(currentMuzzle!=null)
+            {
+                currentMuzzle.transform.parent = currentBarrel.transform;
+                currentMuzzle.transform.position = currentBarrel.GetComponent<Barrel>().muzzleSocket.position;
+            }
+            
 
         }
     }
     public void ChangeHandguard()
     {
+       
         if (currentHandguard != null)
         {
+            if (currentMuzzle != null)
+                currentMuzzle.transform.parent = GameObject.Find("Weapon Generator").transform.parent;
+            if (currentBarrel != null)
+                currentBarrel.transform.parent = GameObject.Find("Weapon Generator").transform.parent;
+
             Destroy(currentHandguard);
             SpawnHandguard();
-            currentBarrel.transform.position = currentHandguard.GetComponent<Handguard>().barrelSocket.transform.position;
+
+            if (currentBarrel != null)
+            {
+                currentBarrel.transform.parent = currentHandguard.transform;
+                currentBarrel.transform.position = currentHandguard.GetComponent<Handguard>().barrelSocket.position;
+            }
+            if (currentMuzzle != null)
+            {
+                currentMuzzle.transform.parent = currentBarrel.transform;
+                currentMuzzle.transform.position = currentBarrel.GetComponent<Barrel>().muzzleSocket.position;
+            }
+            
         }
     }
 
