@@ -272,25 +272,31 @@ public class WeaponGenerator : MonoBehaviour
     }
     public void ChangeScope()
     {
+        //if (currentScope != null)
+        //{
+
+        //    GameObject newScope = SpawnScope();
+
+
+        //    if (!CheckIfPartIsDifferent(currentScope, newScope))
+        //    {
+        //        //Parts are the same so we need to respawn a new one till they are different
+        //        Debug.Log("Retry spawning scope");
+        //        //Crash
+        //        //ChangeScope();
+        //    }
+
+        //    currentScope = newScope;
+        //    Destroy(newScope);
+        //}
+        //else
+        //    Debug.Log("Scope is null");
+
         if (currentScope != null)
         {
-
-            GameObject newScope = SpawnScope();
-
-
-            if (!CheckIfPartIsDifferent(currentScope, newScope))
-            {
-                //Parts are the same so we need to respawn a new one till they are different
-                Debug.Log("Retry spawning scope");
-                //Crash
-                //ChangeScope();
-            }
-
-            currentScope = newScope;
-            Destroy(newScope);
+            Destroy(currentScope);
+            SpawnScope();
         }
-        else
-            Debug.Log("Scope is null");
 
     }
     public void ChangeMagazine()

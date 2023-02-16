@@ -136,9 +136,11 @@ GameObject:
   - component: {fileID: 7225526975649352397}
   - component: {fileID: 4873684012365118983}
   - component: {fileID: 3309722885416035846}
+  - component: {fileID: -434275268729105758}
+  - component: {fileID: -8983431776905962866}
   m_Layer: 0
   m_Name: body_03
-  m_TagString: Untagged
+  m_TagString: Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -228,6 +230,7 @@ MonoBehaviour:
   type: 1
   gripType: 0
   useStock: 0
+  useComplexGrip: 0
   useHandguard: 0
   useBarrel: 0
   useMuzzle: 0
@@ -239,6 +242,32 @@ MonoBehaviour:
   stockSocket: {fileID: 7736838555971597454}
   magazineSocket: {fileID: 4565472944352693717}
   scopeSocket: {fileID: 3445380996229358024}
+--- !u!114 &-434275268729105758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6386721894991290322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad81cd663e2ad6942a991f66fb68f927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!64 &-8983431776905962866
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6386721894991290322}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 748526337856070108, guid: 0d09b7320992bc1418902502b9ab4b8a, type: 3}
 --- !u!1 &8584954050441622767
 GameObject:
   m_ObjectHideFlags: 0

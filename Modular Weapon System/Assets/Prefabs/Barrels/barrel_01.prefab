@@ -12,9 +12,11 @@ GameObject:
   - component: {fileID: 3073979183996318008}
   - component: {fileID: 958141430996092402}
   - component: {fileID: 8057829538621630330}
+  - component: {fileID: -7551935484488818586}
+  - component: {fileID: 4379291142751058794}
   m_Layer: 0
   m_Name: barrel_01
-  m_TagString: Untagged
+  m_TagString: Barrel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -98,6 +100,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   muzzleSocket: {fileID: 3584493923510642594}
+--- !u!114 &-7551935484488818586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1606937335481820199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad81cd663e2ad6942a991f66fb68f927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!64 &4379291142751058794
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1606937335481820199}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2642205408607908945, guid: 72ca55397bdb82f43a6a3152ed382483, type: 3}
 --- !u!1 &1691472405145168189
 GameObject:
   m_ObjectHideFlags: 0

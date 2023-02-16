@@ -6,7 +6,7 @@ public class CameraController : MonoBehaviour
 {
     InterfaceController interfaceController;
 
-    [SerializeField] private Camera camera;
+    [SerializeField] private Camera myCamera;
     [SerializeField] private Transform target;
     [SerializeField] private float distanceToTarget;
 
@@ -16,11 +16,14 @@ public class CameraController : MonoBehaviour
     private float zoomIncrement = 2.0f;
     private int zoomInClamp = 10;
     private int zoomOutClamp = 100;
+
+    public bool isOrbiting = false;
+
     private void Start()
     {
         interfaceController =GameObject.Find("Interface").GetComponent<InterfaceController>();
 
-        distanceToTarget=Vector3.Distance(camera.transform.position, target.position);
+        distanceToTarget=Vector3.Distance(GetComponent<Camera>().transform.position, target.position);
     }
     private void Update()
     {
@@ -32,17 +35,17 @@ public class CameraController : MonoBehaviour
     {
         if(Input.GetAxis("Mouse ScrollWheel") < 0)
         {
-            camera.fieldOfView += zoomIncrement;
+            GetComponent<Camera>().fieldOfView += zoomIncrement;
 
-            if(camera.fieldOfView >=zoomOutClamp)
-                camera.fieldOfView = zoomOutClamp;
+            if(GetComponent<Camera>().fieldOfView >=zoomOutClamp)
+                GetComponent<Camera>().fieldOfView = zoomOutClamp;
         }
         else if(Input.GetAxis("Mouse ScrollWheel") > 0)
         {
-            camera.fieldOfView-=zoomIncrement;
+            GetComponent<Camera>().fieldOfView-=zoomIncrement;
 
-            if (camera.fieldOfView <= zoomInClamp)
-                camera.fieldOfView = zoomInClamp;
+            if (GetComponent<Camera>().fieldOfView <= zoomInClamp)
+                GetComponent<Camera>().fieldOfView = zoomInClamp;
         }
 
     }
@@ -51,27 +54,33 @@ public class CameraController : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-
-            previousPosition = camera.ScreenToViewportPoint(Input.mousePosition);
+            isOrbiting = true;
+            previousPosition = GetComponent<Camera>().ScreenToViewportPoint(Input.mousePosition);
         }
         else if (Input.GetMouseButton(0))
         {
 
-            Vector3 newPosition = camera.ScreenToViewportPoint(Input.mousePosition);
+            Vector3 newPosition = GetComponent<Camera>().ScreenToViewportPoint(Input.mousePosition);
             Vector3 direction = previousPosition - newPosition;
 
             float rotationAroundYAxis = -direction.x * 180; // camera moves horizontally
             float rotationAroundXAxis = direction.y * 180; // camera moves vertically
 
-            camera.transform.position = target.position;
+            GetComponent<Camera>().transform.position = target.position;
 
-            camera.transform.Rotate(new Vector3(1, 0, 0), rotationAroundXAxis);
-            camera.transform.Rotate(new Vector3(0, 1, 0), rotationAroundYAxis, Space.World);
+            GetComponent<Camera>().transform.Rotate(new Vector3(1, 0, 0), rotationAroundXAxis);
+            GetComponent<Camera>().transform.Rotate(new Vector3(0, 1, 0), rotationAroundYAxis, Space.World);
 
-            camera.transform.Translate(new Vector3(0, 0, -distanceToTarget));
+            GetComponent<Camera>().transform.Translate(new Vector3(0, 0, -distanceToTarget));
 
             previousPosition = newPosition;
         }
+        else
+            isOrbiting=false;
 
     }
+
+    
+
+
 }
