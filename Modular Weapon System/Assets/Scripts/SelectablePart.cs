@@ -36,23 +36,30 @@ public class SelectablePart : MonoBehaviour
     }
     private void OnMouseEnter()
     {
-
-        if (!cameraController.isOrbiting)
+        if(weaponGenerator.customizationEnabled)
         {
             renderer.material.color = Color.yellow;
-
         }
+
+        //if (cameraController.isOrbiting)
+        //{
+        //    renderer.material.color = Color.white;
+
+        //}
     }
     private void OnMouseOver()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && weaponGenerator.customizationEnabled)
         {
             //renderer.material.color = Color.blue;
 
             string partTag = tag;
-            Debug.Log("Change " + tag);
+            //Debug.Log("Change " + tag);
             switch(partTag)
             {
+                case "Grip":
+                    weaponGenerator.ChangeGrip();
+                    break;
                 case "Barrel":
                     weaponGenerator.ChangeBarrel();
                     break;
@@ -71,6 +78,9 @@ public class SelectablePart : MonoBehaviour
                 case "Magazine":
                     weaponGenerator.ChangeMagazine();
                     break;
+                case "Body":
+                    weaponGenerator.GenerateNewWeapon();
+                    break;
             }
             
         }
@@ -79,8 +89,6 @@ public class SelectablePart : MonoBehaviour
 
     private void OnMouseExit()
     {
-        
-            renderer.material.color = Color.white;
-        
+        renderer.material.color = Color.white;
     }
 }

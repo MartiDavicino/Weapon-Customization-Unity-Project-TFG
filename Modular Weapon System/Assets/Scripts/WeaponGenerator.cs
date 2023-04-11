@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class WeaponGenerator : MonoBehaviour
 {
+    [HideInInspector]
+    public bool customizationEnabled;
+
     Weapon currentWeapon = null;
 
     GameObject previousCollection = null;
@@ -34,10 +37,17 @@ public class WeaponGenerator : MonoBehaviour
     public List<GameObject> muzzleParts;
     public List<GameObject> scopeParts;
 
+    public int currentBodyIndex,currentStockIndex,
+    currentMagazineIndex,currentGripIndex,currentBarrelIndex,
+    currentHandguardIndex,currentMuzzleIndex,currentScopeIndex;
     // Start is called before the first frame update
     void Start()
     {
+        customizationEnabled = false;
         
+        currentBodyIndex=currentStockIndex=
+        currentMagazineIndex=currentGripIndex=currentBarrelIndex=
+        currentHandguardIndex=currentMuzzleIndex=currentScopeIndex=0;
     }
 
     // Update is called once per frame
@@ -48,6 +58,8 @@ public class WeaponGenerator : MonoBehaviour
 
     public void GenerateNewWeapon()
     {
+        customizationEnabled = true;
+
         DestroyCurrentWeapon();
         DestroyCurrentCollection();
 
@@ -62,6 +74,8 @@ public class WeaponGenerator : MonoBehaviour
     }
     public void GenerateCollection()
     {
+        customizationEnabled=false;
+
         DestroyCurrentWeapon();
         DestroyCurrentCollection();
 
@@ -119,12 +133,14 @@ public class WeaponGenerator : MonoBehaviour
 
     GameObject SpawnPart(WeaponPart weaponPart,List<GameObject> parts,Transform socket)
     {
-        GameObject randomPart=GetRandomPart(parts);
-        GameObject instantiatedPart = null;
+        //GameObject randomPart=GetRandomPart(parts);
+        GameObject randomPart = GetPartFromList(parts,weaponPart);
 
+        GameObject instantiatedPart = null;
         instantiatedPart = Instantiate(randomPart, socket.position, socket.rotation);
         instantiatedPart.transform.parent = socket;
 
+        
         switch (weaponPart)
         {
             case WeaponPart.MAGAZINE:
@@ -189,6 +205,7 @@ public class WeaponGenerator : MonoBehaviour
                 break;
 
         }
+        
 
         return instantiatedPart;
     }
@@ -263,6 +280,65 @@ public class WeaponGenerator : MonoBehaviour
         return partsList[randomNumber];
     }
 
+    GameObject GetPartFromList(List<GameObject> partsList,WeaponPart weaponPart)
+    {
+        int index = 0;
+        switch(weaponPart)
+        {
+            case WeaponPart.SCOPE:
+                {
+                    currentScopeIndex++;
+                    if (currentScopeIndex > partsList.Count-1) currentScopeIndex = 0;
+                    index = currentScopeIndex;
+                }
+                break;
+            case WeaponPart.GRIP:
+                {
+                    currentGripIndex++;
+                    if (currentGripIndex > partsList.Count - 1) currentGripIndex = 0;
+                    index = currentGripIndex;
+                }
+                break;
+            case WeaponPart.MAGAZINE:
+                {
+                    currentMagazineIndex++;
+                    if (currentMagazineIndex > partsList.Count - 1) currentMagazineIndex = 0;
+                    index = currentMagazineIndex;
+                }
+                break;
+            case WeaponPart.STOCK:
+                {
+                    currentStockIndex++;
+                    if (currentStockIndex > partsList.Count - 1) currentStockIndex = 0;
+                    index = currentStockIndex;
+                }
+                break;
+            case WeaponPart.HANDGUARD:
+                {
+                    currentHandguardIndex++;
+                    if (currentHandguardIndex > partsList.Count - 1) currentHandguardIndex = 0;
+                    index = currentHandguardIndex;
+                }
+                break;
+            case WeaponPart.BARREL:
+                {
+                    currentBarrelIndex++;
+                    if (currentBarrelIndex > partsList.Count - 1) currentBarrelIndex = 0;
+                    index = currentBarrelIndex;
+                }
+                break;
+            case WeaponPart.MUZZLE:
+                {
+                    currentMuzzleIndex++;
+                    if (currentMuzzleIndex > partsList.Count - 1) currentMuzzleIndex = 0;
+                    index = currentMuzzleIndex;
+                }
+                break;
+        }
+        return partsList[index];
+    }
+
+
     //Customization functions
     public void ChangeStock()
     {
@@ -274,25 +350,7 @@ public class WeaponGenerator : MonoBehaviour
     }
     public void ChangeScope()
     {
-        //if (currentScope != null)
-        //{
-
-        //    GameObject newScope = SpawnScope();
-
-
-        //    if (!CheckIfPartIsDifferent(currentScope, newScope))
-        //    {
-        //        //Parts are the same so we need to respawn a new one till they are different
-        //        Debug.Log("Retry spawning scope");
-        //        //Crash
-        //        //ChangeScope();
-        //    }
-
-        //    currentScope = newScope;
-        //    Destroy(newScope);
-        //}
-        //else
-        //    Debug.Log("Scope is null");
+        
 
         if (currentScope != null)
         {
@@ -377,7 +435,7 @@ public class WeaponGenerator : MonoBehaviour
     {
         if (currentWeapon != null)
         {
-            
+            //Store all
         }
     }
 
