@@ -39,6 +39,11 @@ public class SelectablePart : MonoBehaviour
         if(weaponGenerator.customizationEnabled)
         {
             renderer.material.color = Color.yellow;
+
+            if (tag!="Body")
+            {
+                renderer.material.color = Color.blue;
+            }
         }
 
         //if (cameraController.isOrbiting)
@@ -53,9 +58,8 @@ public class SelectablePart : MonoBehaviour
         {
             //renderer.material.color = Color.blue;
 
-            string partTag = tag;
             //Debug.Log("Change " + tag);
-            switch(partTag)
+            switch(tag)
             {
                 case "Grip":
                     weaponGenerator.ChangeGrip();
@@ -78,9 +82,9 @@ public class SelectablePart : MonoBehaviour
                 case "Magazine":
                     weaponGenerator.ChangeMagazine();
                     break;
-                case "Body":
-                    weaponGenerator.GenerateNewWeapon();
-                    break;
+                //case "Body":
+                //    weaponGenerator.GenerateNewWeapon();
+                //    break;
             }
             
         }
