@@ -116,6 +116,7 @@ public class WeaponGenerator : MonoBehaviour
         previousWeapon = instantiatedBody;
         return instantiatedBody;
     }
+
     GameObject SpawnPart(WeaponPart weaponPart,List<GameObject> parts,Transform socket)
     {
         GameObject randomPart=GetRandomPart(parts);
@@ -191,6 +192,7 @@ public class WeaponGenerator : MonoBehaviour
 
         return instantiatedPart;
     }
+
     void SpawnMagazine()
     {
         SpawnPart(WeaponPart.MAGAZINE, magazineParts, currentWeapon.magazineSocket);
@@ -379,20 +381,4 @@ public class WeaponGenerator : MonoBehaviour
         }
     }
 
-    bool CheckIfPartIsDifferent(GameObject currentObject,GameObject newObject)
-    {
-        bool ret = true;
-
-        if (currentObject == newObject) 
-        {
-            //Debug.Log("Objects are the same " + currentObject + " " + newObject);
-            ret = false;
-        }
-        else
-        {
-            //Debug.Log("Objects are the NOT the same " + currentObject + " " + newObject);
-        }
-
-        return ret;
-    }
 }
