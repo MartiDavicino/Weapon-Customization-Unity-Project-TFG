@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 2274.58, g: 2361.6484, b: 3409.3672, a: 1}
+  m_IndirectSpecularColor: {r: 2276.5664, g: 2362.9375, b: 3409.8633, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2935,44 +2935,45 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90f0d88136b6fb04286550cfc3d3a923, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  customizationEnabled: 0
   currentBarrel: {fileID: 0}
   currentMuzzle: {fileID: 0}
   bodyParts:
-  - {fileID: 774119902316997918, guid: 3c1d75e7b554e024d837690e8cedd690, type: 3}
-  - {fileID: 3887254961135721729, guid: 27dcc026114fa7049b00eb7e4950bc4e, type: 3}
-  - {fileID: 6386721894991290322, guid: b6a347cdd4aeaaf4c98a98ed9812c350, type: 3}
+  - {fileID: 4719050908382148994, guid: 827e582d714fc3848930ba6f0db3fa0c, type: 3}
   stockParts:
-  - {fileID: 2121717621402163437, guid: 4ba9b567e16721f48ae411937c07c477, type: 3}
-  - {fileID: 6002812287030437531, guid: 0848c432fc76a1a4b9049629fe1803ad, type: 3}
-  - {fileID: 1079126944435344047, guid: b930af538ceac8240b704561398d0114, type: 3}
+  - {fileID: 6473506562152009110, guid: 2e2918e6f820a144f8c622306d0ea966, type: 3}
+  - {fileID: 395370419024089389, guid: 3e37e21b8dfdd13439acc22eee76002f, type: 3}
+  - {fileID: 952544950995492788, guid: ccf80446acd2f984dba9a0c6879b72da, type: 3}
   magazineParts:
-  - {fileID: 6582822317592368403, guid: ec444af39c7f9ea4d83e152eac39957f, type: 3}
-  - {fileID: 7701494510367815972, guid: 5250530d9aff7f0439e02c194d39205e, type: 3}
-  - {fileID: 6831425272042554287, guid: c8e26a8f326cfb84fbd5287cc377c9d4, type: 3}
+  - {fileID: 6845375207821992675, guid: 24963de6614b40d4689a08eb8e15ccd9, type: 3}
+  - {fileID: 4271831805876129202, guid: 58b77ede956dce9438ca024ce129cced, type: 3}
+  - {fileID: 5770327382237241769, guid: a0ffb03113162564981c26f58bf688a6, type: 3}
   gripParts:
-  - {fileID: 38666162604136656, guid: 81bd00eb3b36b7c45bdadbce17b48fdf, type: 3}
-  - {fileID: 2854265490776095979, guid: 6154095a3a8ac44439d0389ab1d63090, type: 3}
-  - {fileID: 6000039308682765083, guid: ace83833d25598f4d9afaeb3fa34ce06, type: 3}
-  - {fileID: 1722853702877289810, guid: 45c9868222c4c724e9a27c167d7a9690, type: 3}
-  - {fileID: 4304915078219051886, guid: 9a585882f38da014cbf9a2d4b21ca360, type: 3}
-  - {fileID: 4014559756527794419, guid: bcb101ce260e33549a1e506a815ddea2, type: 3}
+  - {fileID: 70747434119487897, guid: 976e6aa728b5b394f9e2d3cdbf298b74, type: 3}
+  - {fileID: 1985271559885063889, guid: cedb0c2b68c270943b4882907779b683, type: 3}
   foregripParts: []
   barrelParts:
-  - {fileID: 1606937335481820199, guid: 57617ab2141fe944ba0bc3d2b7735731, type: 3}
-  - {fileID: 4880820751112983834, guid: 1c8ae6bf31299c040834f43347f1540e, type: 3}
-  - {fileID: 798739133607395716, guid: 73630690d7e44584bb5f341263a9ceb4, type: 3}
+  - {fileID: 7195518980393101603, guid: 4e027f2ed1942f94f9f703ead4150395, type: 3}
   handguardParts:
-  - {fileID: 5594248197840667220, guid: de43d5059c71c7d449da6665f1c60f29, type: 3}
-  - {fileID: 7042788883416975983, guid: 6f77d07ae01e07547b74980a5179e44b, type: 3}
-  - {fileID: 5545384961040081421, guid: 69ab6ee9d29aec846a9d3fe8de71e690, type: 3}
+  - {fileID: 1504638237104743905, guid: a26deb67edf14e6438946f6fb4033f41, type: 3}
+  - {fileID: 8019233520087441837, guid: 6218ff366960e2241858d29b1247eb35, type: 3}
+  - {fileID: 7205625824931302786, guid: d7ecac2cad5249949852dd81d79c4353, type: 3}
   muzzleParts:
-  - {fileID: 4719311801796757729, guid: 6ba271ea6ae12a94ebf6ae271847df1e, type: 3}
-  - {fileID: 5640923944380837675, guid: d57c3a2492483a740875bcf7874dc3f8, type: 3}
-  - {fileID: 5512711667120405389, guid: 8e4024761cd19d34785a03b7b3c09fdb, type: 3}
+  - {fileID: 915296721948901006, guid: 7031ef2d58ddd1040a2c5c355d168d9f, type: 3}
+  - {fileID: 8740347624711532621, guid: 16e00dcd9a851074d8a7e623cb84fd49, type: 3}
+  - {fileID: 6862179407806225030, guid: a88018cc2e0bca247afaf45d5b62823b, type: 3}
   scopeParts:
-  - {fileID: 5659407095045331929, guid: 55d62859b3fa67b4dbdfe98af1927b05, type: 3}
-  - {fileID: 2370804130104534678, guid: 03b6c4c287b172e438c4f692d3d4b4a2, type: 3}
-  - {fileID: 5530490904033507747, guid: 013377499c687094e9d91677eeeebfc8, type: 3}
+  - {fileID: 8971236807480016408, guid: 18d4e60b36d639c45b12b70d79708ca7, type: 3}
+  - {fileID: 2924819933859878625, guid: bf9d917798fa7f345914cb0d79cd0a2d, type: 3}
+  - {fileID: 7498695232280383990, guid: 5ab6294aee09c3e44acc9158d4f426b0, type: 3}
+  currentBodyIndex: 0
+  currentStockIndex: 0
+  currentMagazineIndex: 0
+  currentGripIndex: 0
+  currentBarrelIndex: 0
+  currentHandguardIndex: 0
+  currentMuzzleIndex: 0
+  currentScopeIndex: 0
 --- !u!4 &1894474046
 Transform:
   m_ObjectHideFlags: 0
@@ -2980,14 +2981,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1894474044}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &1954319489
 GameObject:
   m_ObjectHideFlags: 0

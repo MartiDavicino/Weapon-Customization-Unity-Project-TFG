@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 39940340421830404}
   - component: {fileID: -5599046742427036353}
   - component: {fileID: 1400472274243810530}
+  - component: {fileID: 8619131015728112268}
   m_Layer: 0
   m_Name: grip_04
   m_TagString: Untagged
@@ -196,6 +197,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
+--- !u!64 &8619131015728112268
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1985271559885063889}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2169682933118179854, guid: 36dd7bde742f3284bb404e592cb80707, type: 3}
 --- !u!1 &3981560273484202149
 GameObject:
   m_ObjectHideFlags: 0

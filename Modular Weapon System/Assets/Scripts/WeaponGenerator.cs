@@ -139,7 +139,7 @@ public class WeaponGenerator : MonoBehaviour
         GameObject instantiatedPart = null;
         instantiatedPart = Instantiate(randomPart, socket.position, socket.rotation);
         instantiatedPart.transform.parent = socket;
-
+        //instantiatedPart.transform.localScale = new Vector3(10,10,10);
         
         switch (weaponPart)
         {
@@ -161,24 +161,24 @@ public class WeaponGenerator : MonoBehaviour
             case WeaponPart.GRIP:
                 {
 
-                    if (currentWeapon.type == WeaponType.BULLPUP || !currentWeapon.useComplexGrip)
-                    {
-                        Destroy(instantiatedPart);
+                    //if (currentWeapon.type == WeaponType.BULLPUP || !currentWeapon.useComplexGrip)
+                    //{
+                    //    Destroy(instantiatedPart);
 
-                        while (randomPart.GetComponent<Grip>().type != GripType.SIMPLE)
-                        {
-                            randomPart = GetRandomPart(parts);
-                        }
-                    }
-                    else if (currentWeapon.useComplexGrip)
-                    {
-                        Destroy(instantiatedPart);
+                    //    while (randomPart.GetComponent<Grip>().type != GripType.SIMPLE)
+                    //    {
+                    //        randomPart = GetRandomPart(parts);
+                    //    }
+                    //}
+                    //else if (currentWeapon.useComplexGrip)
+                    //{
+                    //    Destroy(instantiatedPart);
 
-                        while (randomPart.GetComponent<Grip>().type == GripType.SIMPLE)
-                        {
-                            randomPart = GetRandomPart(parts);
-                        }
-                    }
+                    //    while (randomPart.GetComponent<Grip>().type == GripType.SIMPLE)
+                    //    {
+                    //        randomPart = GetRandomPart(parts);
+                    //    }
+                    //}
 
 
 
@@ -244,6 +244,7 @@ public class WeaponGenerator : MonoBehaviour
     void SpawnGrip()
     {
         currentWeapon.UsePart(WeaponPart.GRIP);
+        
         SpawnPart(WeaponPart.GRIP, gripParts, currentWeapon.gripSocket);
     }
     void SpawnBarrel()
