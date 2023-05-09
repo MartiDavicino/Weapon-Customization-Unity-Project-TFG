@@ -5,8 +5,8 @@ using UnityEngine;
 public enum GripType
 {
     SIMPLE,
-    STOCK,
-    INTEGRED
+    INTEGRATED,
+    HYBRID
 }
 public class Grip : MonoBehaviour
 {

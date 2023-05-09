@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 334484706387485739}
   - component: {fileID: 3678191318800657294}
   - component: {fileID: 1508557225664782148}
+  - component: {fileID: 2104449659221152406}
   m_Layer: 0
   m_Name: grip_03
   m_TagString: Untagged
@@ -169,6 +170,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2104449659221152406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1148282381073301137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f032aa40fd8f6914986f237e99eeac04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
 --- !u!1 &1898571446012404951
 GameObject:
   m_ObjectHideFlags: 0

@@ -177,6 +177,7 @@ GameObject:
   - component: {fileID: 5629226606126117883}
   - component: {fileID: 8768750713806011486}
   - component: {fileID: 6797105125430970516}
+  - component: {fileID: 5472379615157304791}
   m_Layer: 0
   m_Name: grip_02
   m_TagString: Untagged
@@ -252,6 +253,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &5472379615157304791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4995854734257776961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f032aa40fd8f6914986f237e99eeac04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 1
 --- !u!1 &6659317168427333810
 GameObject:
   m_ObjectHideFlags: 0
