@@ -31,7 +31,7 @@ public class WeaponGenerator : MonoBehaviour
     public List<GameObject> stockParts;
     public List<GameObject> magazineParts;
     public List<GameObject> gripParts;
-    public List<GameObject> foregripParts;
+    //public List<GameObject> foregripParts;
     public List<GameObject> barrelParts;
     public List<GameObject> handguardParts;
     public List<GameObject> muzzleParts;
@@ -82,11 +82,11 @@ public class WeaponGenerator : MonoBehaviour
         GameObject collection=new GameObject();
         collection.name = "Weapon Collection";
         int rows, columns;
-        rows = 10;
-        columns = 10;
+        rows = 6;
+        columns = 6;
 
         //Vector3 pos=new Vector2(0,0);
-        Vector2 increment=new Vector2(40,15);
+        Vector2 increment=new Vector2(4,1.5f);
 
         for(int i = 0; i < rows; i++)
         {
@@ -98,7 +98,7 @@ public class WeaponGenerator : MonoBehaviour
                 newWeapon.transform.parent = collection.transform;
             }
         }
-        Vector3 collectionPos = new Vector3(-(increment.x * rows) / 2, -(increment.y * columns) / 2, -40);
+        Vector3 collectionPos = new Vector3(-(increment.x * rows) / 2, -(increment.y * columns) / 2, -10);
         collection.transform.position = collectionPos;
         previousCollection = collection;
     }
