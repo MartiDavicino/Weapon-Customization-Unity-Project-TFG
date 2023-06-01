@@ -6,7 +6,8 @@ using UnityEngine;
 public enum WeaponType
 {
     NON_BULLPUP,
-    BULLPUP
+    BULLPUP,
+    LMG
     
 }
 public enum WeaponPart

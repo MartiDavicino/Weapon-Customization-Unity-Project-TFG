@@ -10,7 +10,9 @@ public class WeaponGenerator : MonoBehaviour
 
     Weapon currentWeapon = null;
 
+    [HideInInspector]
     GameObject previousCollection = null;
+    [HideInInspector]
     GameObject previousWeapon = null;
 
     //private Handguard currentHandguard = null;
