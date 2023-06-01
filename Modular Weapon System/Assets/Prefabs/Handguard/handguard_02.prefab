@@ -145,8 +145,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   partMaterials:
-  - {fileID: -4973734387028869240, guid: 21782a80e860cea4191f2ca97f31d749, type: 3}
   - {fileID: -1444460858095362738, guid: 21782a80e860cea4191f2ca97f31d749, type: 3}
+  - {fileID: -4973734387028869240, guid: 21782a80e860cea4191f2ca97f31d749, type: 3}
 --- !u!64 &-5460951145643796722
 MeshCollider:
   m_ObjectHideFlags: 0

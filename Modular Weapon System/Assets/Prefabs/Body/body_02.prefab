@@ -54,14 +54,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 642536523410872130}
-  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.0028, y: 0.0022, z: -0.0028}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.00254, y: 0.0006, z: -0.00247}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7042132201377462200}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &932612871554104364
 GameObject:
   m_ObjectHideFlags: 0
@@ -259,14 +259,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   gripType: 0
-  useStock: 0
-  useComplexGrip: 0
-  useHandguard: 0
-  useBarrel: 0
-  useMuzzle: 0
-  useHandguardAttachment: 0
-  useBarrelAttachment: 0
-  useScope: 0
   handguardSocket: {fileID: 3018536933784644486}
   gripSocket: {fileID: 8859770878933439279}
   stockSocket: {fileID: 6679304184471745430}

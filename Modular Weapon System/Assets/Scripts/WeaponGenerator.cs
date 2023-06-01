@@ -125,7 +125,6 @@ public class WeaponGenerator : MonoBehaviour
     {
         currentBodyIndex=UnityEngine.Random.Range(0,bodyParts.Count);
 
-
         currentMagazineIndex = GetRandomPartIndex(WeaponPart.MAGAZINE, magazineParts);
         currentScopeIndex = GetRandomPartIndex(WeaponPart.SCOPE, scopeParts);
         currentGripIndex = GetRandomPartIndex(WeaponPart.GRIP, gripParts);
@@ -312,10 +311,9 @@ public class WeaponGenerator : MonoBehaviour
     }
     public void ChangeScope()
     {
-        
-
         if (currentScope != null)
         {
+            GetRandomPartIndex(WeaponPart.SCOPE, scopeParts);
             Destroy(currentScope);
             SpawnScope();
         }

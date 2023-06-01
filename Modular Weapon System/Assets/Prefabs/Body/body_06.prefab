@@ -197,14 +197,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   gripType: 0
-  useStock: 0
-  useComplexGrip: 0
-  useHandguard: 0
-  useBarrel: 0
-  useMuzzle: 0
-  useHandguardAttachment: 0
-  useBarrelAttachment: 0
-  useScope: 0
   handguardSocket: {fileID: 8599012705344048477}
   gripSocket: {fileID: 8015022088507153408}
   stockSocket: {fileID: 7606302995081151915}
@@ -265,7 +257,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9039411377270681598}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.00376, y: 0, z: -0.00186}
+  m_LocalPosition: {x: 0.00407, y: 0, z: -0.00161}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
