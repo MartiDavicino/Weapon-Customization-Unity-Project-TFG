@@ -28,7 +28,6 @@ public class Weapon : MonoBehaviour
     [HideInInspector]
     public GripType gripType;
     //[HideInInspector]
-    public bool useStock,useComplexGrip,useHandguard, useBarrel,useMuzzle,useHandguardAttachment,useBarrelAttachment,useScope = false;
 
     //float stockProabability = 0.9f;
     //float handguardProbability=0.7f;
@@ -46,13 +45,13 @@ public class Weapon : MonoBehaviour
     //float barrelAttachmnetProbability = 1f;
     //float scopeProbability = 0.65f;
 
-    float stockProabability =1f;
-    float handguardProbability =1f;
-    float barrelProbability =1f;
-    float muzzleProbability =1f;
+    float stockProabability = 1f;
+    float handguardProbability = 1f;
+    float barrelProbability = 1f;
+    float muzzleProbability = 1f;
     float handguardAttachmentProbability = 1f;
     float barrelAttachmnetProbability = 1f;
-    float scopeProbability =1f;
+    float scopeProbability = 1f;
     float complexGripProbabilkity = .5f;
 
 
@@ -63,71 +62,4 @@ public class Weapon : MonoBehaviour
     public Transform magazineSocket;
     public Transform scopeSocket;
 
-    [System.Obsolete]
-    public bool UsePart(WeaponPart part)
-    {
-        bool ret = false;
-        float ran = Random.RandomRange(0.0f, 1.0f);
-
-        switch(part)
-        {
-            case WeaponPart.GRIP:
-                if (ran <= complexGripProbabilkity)
-                {
-                    useComplexGrip  = true;
-                    ret = true;
-                }
-                break;
-            case WeaponPart.STOCK:
-                if (ran <= stockProabability)
-                {
-                    useStock = true;
-                    ret = true;
-                }
-                break;
-           case WeaponPart.HANDGUARD:
-                if (ran <= handguardProbability)
-                {
-                    useHandguard = true;
-                    ret = true;
-                }
-                break;
-            case WeaponPart.BARREL:
-                if (ran <= barrelProbability)
-                {
-                    useBarrel = true;
-                    ret = true;
-                }
-                break;
-            case WeaponPart.MUZZLE:
-                if (ran <= muzzleProbability)
-                {
-                    useMuzzle = true;
-                    ret = true;
-                }
-                break;
-            case WeaponPart.HANDGUARD_ATTACHMENT:
-                if (ran <= handguardAttachmentProbability)
-{
-                    useHandguardAttachment = true;
-                    ret = true;
-                }                break;
-            case WeaponPart.BARREL_ATTACHMENT:
-                if (ran <= barrelAttachmnetProbability)
-                {
-                    useBarrelAttachment = true;
-                    ret = true;
-                }
-                break;
-            case WeaponPart.SCOPE:
-                if (ran <= scopeProbability)
-                {
-                    useScope = true;
-                    ret = true;
-                }
-                break;
-        }
-        
-        return ret;
-    }
 }

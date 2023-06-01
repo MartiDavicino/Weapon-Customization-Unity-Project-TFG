@@ -7,7 +7,8 @@ public class SelectablePart : MonoBehaviour
     private Renderer renderer;
     CameraController cameraController;
     WeaponGenerator weaponGenerator;
-
+    public List<Material> partMaterials;
+    private Color highlightColor;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,8 +25,7 @@ public class SelectablePart : MonoBehaviour
         if (renderer == null)
             Debug.Log("Renderer is null");
 
-        renderer.material.color = Color.white;
-
+        highlightColor=new Color(0,0.2f,1);
 
     }
 
@@ -38,11 +38,17 @@ public class SelectablePart : MonoBehaviour
     {
         if(weaponGenerator.customizationEnabled)
         {
-            renderer.material.color = Color.yellow;
+            renderer.material.color = Color.red;
 
             if (tag!="Body")
             {
-                renderer.material.color = Color.blue;
+                for(int i=0; i<renderer.materials.Length;i++)
+                {
+                    renderer.materials[i].color = highlightColor;
+
+                }
+
+
             }
         }
 
@@ -58,7 +64,7 @@ public class SelectablePart : MonoBehaviour
         {
             //renderer.material.color = Color.blue;
 
-            //Debug.Log("Change " + tag);
+            Debug.Log("Change " + tag);
             switch(tag)
             {
                 case "Grip":
@@ -93,6 +99,11 @@ public class SelectablePart : MonoBehaviour
 
     private void OnMouseExit()
     {
-        renderer.material.color = Color.white;
+        //renderer.material.color = Color.white;
+
+        for (int i = 0; i < renderer.materials.Length; i++)
+        {
+            renderer.materials[i].color = partMaterials[i].color;
+        }
     }
 }

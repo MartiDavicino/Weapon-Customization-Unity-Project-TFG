@@ -12,9 +12,11 @@ GameObject:
   - component: {fileID: 2162770774954977086}
   - component: {fileID: 4172378099374707700}
   - component: {fileID: 85156791081523138}
+  - component: {fileID: 1500074804095549199}
+  - component: {fileID: -3761800921081798540}
   m_Layer: 0
   m_Name: handguard_04
-  m_TagString: Untagged
+  m_TagString: Handguard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,6 +101,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   barrelSocket: {fileID: 1287774531983001737}
+--- !u!114 &1500074804095549199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2515189706513642017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad81cd663e2ad6942a991f66fb68f927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  partMaterials:
+  - {fileID: -1444460858095362738, guid: aff07771062e62848980fff9d3550362, type: 3}
+  - {fileID: -4973734387028869240, guid: aff07771062e62848980fff9d3550362, type: 3}
+--- !u!64 &-3761800921081798540
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2515189706513642017}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2228417370725966487, guid: aff07771062e62848980fff9d3550362, type: 3}
 --- !u!1 &6609205674898078773
 GameObject:
   m_ObjectHideFlags: 0
