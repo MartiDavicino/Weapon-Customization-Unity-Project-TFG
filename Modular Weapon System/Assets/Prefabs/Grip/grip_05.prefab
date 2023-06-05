@@ -12,9 +12,11 @@ GameObject:
   - component: {fileID: 7407436854701614708}
   - component: {fileID: 4695134395603915454}
   - component: {fileID: 3746257362611579487}
+  - component: {fileID: -6230797827773437376}
+  - component: {fileID: 4284301560522642065}
   m_Layer: 0
   m_Name: grip_05
-  m_TagString: Untagged
+  m_TagString: Grip
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -98,3 +100,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
+--- !u!64 &-6230797827773437376
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6496596030784484203}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 5600255544074246813, guid: 51149dd0975098f47a5cda09811062b3, type: 3}
+--- !u!114 &4284301560522642065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6496596030784484203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad81cd663e2ad6942a991f66fb68f927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  partMaterials:
+  - {fileID: -1444460858095362738, guid: 51149dd0975098f47a5cda09811062b3, type: 3}
+  - {fileID: -4973734387028869240, guid: 51149dd0975098f47a5cda09811062b3, type: 3}

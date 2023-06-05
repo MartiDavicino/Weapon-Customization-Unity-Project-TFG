@@ -11,9 +11,12 @@ GameObject:
   - component: {fileID: 4539664696344655183}
   - component: {fileID: 625995299454597866}
   - component: {fileID: 3407830881411190304}
+  - component: {fileID: -1025148106240950621}
+  - component: {fileID: 3119483419597250754}
+  - component: {fileID: -6254259224999590439}
   m_Layer: 0
   m_Name: stock_05
-  m_TagString: Untagged
+  m_TagString: Stock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -84,3 +87,45 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &-1025148106240950621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3768369746654883829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad81cd663e2ad6942a991f66fb68f927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  partMaterials:
+  - {fileID: -1444460858095362738, guid: 52b7d745eaafb784ab47ef2b5eba656e, type: 3}
+  - {fileID: -4973734387028869240, guid: 52b7d745eaafb784ab47ef2b5eba656e, type: 3}
+--- !u!64 &3119483419597250754
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3768369746654883829}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5230304370186415000, guid: 52b7d745eaafb784ab47ef2b5eba656e, type: 3}
+--- !u!114 &-6254259224999590439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3768369746654883829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e4197fcda0972645a75727f3de0b709, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0

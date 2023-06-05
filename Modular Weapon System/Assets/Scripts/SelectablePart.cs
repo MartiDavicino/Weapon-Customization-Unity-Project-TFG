@@ -64,7 +64,7 @@ public class SelectablePart : MonoBehaviour
         {
             //renderer.material.color = Color.blue;
 
-            Debug.Log("Change " + tag);
+            //Debug.Log("Change " + tag);
             switch(tag)
             {
                 case "Grip":

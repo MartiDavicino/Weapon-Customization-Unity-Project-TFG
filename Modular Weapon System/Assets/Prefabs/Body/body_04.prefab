@@ -164,7 +164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f34f557a07519040b22f37a1ce24e77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 0
+  type: 2
   gripType: 0
   handguardSocket: {fileID: 7994311137704645337}
   gripSocket: {fileID: 4971298899933305630}

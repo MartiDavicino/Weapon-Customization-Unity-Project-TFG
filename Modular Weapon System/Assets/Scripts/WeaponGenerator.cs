@@ -33,7 +33,6 @@ public class WeaponGenerator : MonoBehaviour
     public List<GameObject> stockParts;
     public List<GameObject> magazineParts;
     public List<GameObject> gripParts;
-    //public List<GameObject> foregripParts;
     public List<GameObject> barrelParts;
     public List<GameObject> handguardParts;
     public List<GameObject> muzzleParts;
@@ -69,7 +68,9 @@ public class WeaponGenerator : MonoBehaviour
 
         RandomizeWeaponElements();
 
-        SpawnRandomWeapon(Vector2.zero);
+        //CheckWeaponConsistency();
+
+        SpawnWeapon(Vector2.zero);
     }
 
     public void UpdateWeapon()
@@ -105,7 +106,8 @@ public class WeaponGenerator : MonoBehaviour
             {
                 
                 Vector2 newPos = new Vector2((increment.x * i), (increment.y * j));
-                GameObject newWeapon=SpawnRandomWeapon(newPos);
+                RandomizeWeaponElements();
+                GameObject newWeapon=SpawnWeapon(newPos);
                 newWeapon.transform.parent = collection.transform;
             }
         }
@@ -123,18 +125,20 @@ public class WeaponGenerator : MonoBehaviour
 
     private void RandomizeWeaponElements()
     {
-        currentBodyIndex=UnityEngine.Random.Range(0,bodyParts.Count);
+        //currentBodyIndex=UnityEngine.Random.Range(0,bodyParts.Count);
 
-        currentMagazineIndex = GetRandomPartIndex(WeaponPart.MAGAZINE, magazineParts);
-        currentScopeIndex = GetRandomPartIndex(WeaponPart.SCOPE, scopeParts);
-        currentGripIndex = GetRandomPartIndex(WeaponPart.GRIP, gripParts);
-        currentStockIndex = GetRandomPartIndex(WeaponPart.STOCK, stockParts);
-        currentHandguardIndex = GetRandomPartIndex(WeaponPart.HANDGUARD, handguardParts);
-        currentBarrelIndex = GetRandomPartIndex(WeaponPart.BARREL, barrelParts);
-        currentMuzzleIndex = GetRandomPartIndex(WeaponPart.MUZZLE, muzzleParts);
+        currentBodyIndex++; if (currentBodyIndex > bodyParts.Count - 1) currentBodyIndex = 0;
+
+        currentMagazineIndex = GetRandomIndex(WeaponPart.MAGAZINE, magazineParts);
+        currentScopeIndex = GetRandomIndex(WeaponPart.SCOPE, scopeParts);
+        currentGripIndex = GetRandomIndex(WeaponPart.GRIP, gripParts);
+        currentStockIndex = GetRandomIndex(WeaponPart.STOCK, stockParts);
+        currentHandguardIndex = GetRandomIndex(WeaponPart.HANDGUARD, handguardParts);
+        currentBarrelIndex = GetRandomIndex(WeaponPart.BARREL, barrelParts);
+        currentMuzzleIndex = GetRandomIndex(WeaponPart.MUZZLE, muzzleParts);
 
     }
-    private GameObject SpawnRandomWeapon(Vector2 pos)
+    private GameObject SpawnWeapon(Vector2 pos)
     {
 
         //Body
@@ -238,9 +242,53 @@ public class WeaponGenerator : MonoBehaviour
         SpawnPart(WeaponPart.MUZZLE, muzzleParts, currentMuzzleIndex, currentBarrel.GetComponent<Barrel>().muzzleSocket);
     }
 
+    int GetRandomIndex(WeaponPart weaponPart,List<GameObject> partsList)
+    {
+        int index= UnityEngine.Random.Range(0, partsList.Count);
 
 
-    int GetRandomPartIndex(WeaponPart weaponPart,List<GameObject> partsList)
+        switch (weaponPart)
+        {
+            case WeaponPart.SCOPE:
+                {
+                    currentScopeIndex = index;
+                }
+                break;
+            case WeaponPart.GRIP:
+                {
+                    currentGripIndex = index;
+                }
+                break;
+            case WeaponPart.MAGAZINE:
+                {                 
+                    currentMagazineIndex = index;
+                }
+                break;
+            case WeaponPart.STOCK:
+                {
+                    currentStockIndex = index;
+                }
+                break;
+            case WeaponPart.HANDGUARD:
+                {
+                    currentHandguardIndex = index;
+                }
+                break;
+            case WeaponPart.BARREL:
+                {
+                   currentBarrelIndex = index;
+                }
+                break;
+            case WeaponPart.MUZZLE:
+                {
+                    currentMuzzleIndex = index;
+                }
+                break;
+        }
+        return index;
+    }
+
+    int GetNextIndexPart(WeaponPart weaponPart,List<GameObject> partsList)
     {
         //Here we take considerations about weapon restrictions
         int index = 0;
@@ -257,6 +305,49 @@ public class WeaponGenerator : MonoBehaviour
                 {
                     currentGripIndex++;
                     if (currentGripIndex > partsList.Count - 1) currentGripIndex = 0;
+
+                    if (currentWeapon != null)
+                    {
+
+                        if (currentWeapon.type == WeaponType.BULLPUP)
+                        {
+
+                            if (partsList[currentGripIndex].GetComponent<Grip>().type != GripType.SIMPLE)
+                            {
+                                //Debug.Log("Shouldnt use this grip");
+                                currentGripIndex++;
+                                if (currentGripIndex > partsList.Count - 1) currentGripIndex = 0;
+                            }
+
+                            if (partsList[currentGripIndex].GetComponent<Grip>().type != GripType.SIMPLE)
+                            {
+                                //Debug.Log("Shouldnt use this grip");
+                                currentGripIndex++;
+                                if (currentGripIndex > partsList.Count - 1) currentGripIndex = 0;
+                            }
+                        }
+                        else 
+                        {
+                            if(stockParts[currentStockIndex].GetComponent<Stock>().type == StockType.SIMPLE)
+                            {
+                                if (partsList[currentGripIndex].GetComponent<Grip>().type == GripType.INTEGRATED)
+                                {
+                                    //Debug.Log("Shouldnt use this grip");
+                                    currentGripIndex++;
+                                    if (currentGripIndex > partsList.Count - 1) currentGripIndex = 0;
+                                }
+
+                                if (partsList[currentGripIndex].GetComponent<Grip>().type == GripType.HYBRID)
+                                {
+                                    //Debug.Log("Shouldnt use this grip");
+                                    currentGripIndex++;
+                                    if (currentGripIndex > partsList.Count - 1) currentGripIndex = 0;
+                                }
+                            }
+                        }
+                    }
+                    
+
                     index = currentGripIndex;
                 }
                 break;
@@ -305,6 +396,7 @@ public class WeaponGenerator : MonoBehaviour
     {
         if(currentStock != null)
         {
+            GetNextIndexPart(WeaponPart.STOCK, stockParts);
             Destroy(currentStock);
             SpawnStock();
         }
@@ -313,7 +405,7 @@ public class WeaponGenerator : MonoBehaviour
     {
         if (currentScope != null)
         {
-            GetRandomPartIndex(WeaponPart.SCOPE, scopeParts);
+            GetNextIndexPart(WeaponPart.SCOPE, scopeParts);
             Destroy(currentScope);
             SpawnScope();
         }
@@ -323,6 +415,7 @@ public class WeaponGenerator : MonoBehaviour
     {
         if (currentMagazine != null)
         {
+            GetNextIndexPart(WeaponPart.MAGAZINE, magazineParts);
             Destroy(currentMagazine);
             SpawnMagazine();
         }
@@ -331,7 +424,7 @@ public class WeaponGenerator : MonoBehaviour
     {
         if (currentMuzzle != null)
         {
-            GetRandomPartIndex(WeaponPart.MUZZLE,muzzleParts);
+            GetNextIndexPart(WeaponPart.MUZZLE,muzzleParts);
             Destroy(currentMuzzle);
             SpawnMuzzle();
         }
@@ -340,6 +433,7 @@ public class WeaponGenerator : MonoBehaviour
     {
         if (currentGrip != null)
         {
+            GetNextIndexPart(WeaponPart.GRIP, gripParts);
             Destroy(currentGrip);
             SpawnGrip();
         }
@@ -354,6 +448,7 @@ public class WeaponGenerator : MonoBehaviour
                 currentMuzzle.transform.parent = GameObject.Find("Weapon Generator").transform.parent;
             }
 
+            GetNextIndexPart(WeaponPart.BARREL, barrelParts);
             Destroy(currentBarrel);
             SpawnBarrel();
 
@@ -376,7 +471,7 @@ public class WeaponGenerator : MonoBehaviour
             if (currentBarrel != null)
                 currentBarrel.transform.parent = GameObject.Find("Weapon Generator").transform.parent;
 
-            GetRandomPartIndex(WeaponPart.HANDGUARD,handguardParts);
+            GetNextIndexPart(WeaponPart.HANDGUARD,handguardParts);
             Destroy(currentHandguard);
             SpawnHandguard();
 

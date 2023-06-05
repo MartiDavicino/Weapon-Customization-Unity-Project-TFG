@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3847775661989319937}
   - component: {fileID: 1333906469771583947}
   - component: {fileID: 1249307351489648826}
-  - component: {fileID: -1786977182057733378}
+  - component: {fileID: 4092090547667488274}
   m_Layer: 0
   m_Name: scope_06
   m_TagString: Scope
@@ -99,8 +99,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   partMaterials:
   - {fileID: -4973734387028869240, guid: 744ef9ab49bd2b6479a48296be70e5fe, type: 3}
---- !u!64 &-1786977182057733378
-MeshCollider:
+--- !u!65 &4092090547667488274
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -109,7 +109,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -4716103142011394507, guid: 744ef9ab49bd2b6479a48296be70e5fe, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.0013119244, y: 0.00082157523, z: 0.0020550885}
+  m_Center: {x: -0.00000003905734, y: 0.00016485139, z: 0.0009732463}
