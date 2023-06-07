@@ -8,7 +8,7 @@ public class WeaponGenerator : MonoBehaviour
     [HideInInspector]
     public bool customizationEnabled;
 
-    Weapon currentWeapon = null;
+    public Weapon currentWeapon = null;
 
     [HideInInspector]
     GameObject previousCollection = null;
@@ -21,7 +21,6 @@ public class WeaponGenerator : MonoBehaviour
     GameObject currentStock = null;
     GameObject currentMagazine = null;
     GameObject currentGrip = null;
-    GameObject currentForegrip = null;
 
     GameObject currentBarrel = null;
     GameObject currentHandguard = null;
@@ -69,9 +68,40 @@ public class WeaponGenerator : MonoBehaviour
 
         RandomizeWeaponElements();
 
-        //CheckWeaponConsistency();
 
         SpawnWeapon(Vector2.zero);
+    }
+
+    private void CheckWeaponConsistency()
+    {
+        //Change grip
+
+        if (currentWeapon.type == WeaponType.NON_BULLPUP)
+        {
+            int index = UnityEngine.Random.Range(1, gripParts.Count);
+            currentGripIndex = index;
+
+        }
+        if (currentWeapon.type == WeaponType.BULLPUP)
+        {
+            int index = UnityEngine.Random.Range(2, gripParts.Count);
+            currentGripIndex = index;
+        }
+        if (currentWeapon.type == WeaponType.UMP)
+        {
+            //Dont do nothing
+        }
+
+        //Change stock
+        if(gripParts[currentGripIndex].GetComponent<Grip>().type == GripType.INTEGRATED)
+        {
+            int index = UnityEngine.Random.Range(0, 1);
+            currentStockIndex = index;
+        }
+        if (gripParts[currentGripIndex].GetComponent<Grip>().type == GripType.HYBRID)
+        {
+            currentStockIndex = 1;
+        }
     }
 
     public void UpdateWeapon()
@@ -146,6 +176,10 @@ public class WeaponGenerator : MonoBehaviour
         GameObject weaponBody = bodyParts[currentBodyIndex];
         GameObject instantiatedBody =Instantiate(weaponBody, pos,Quaternion.Euler(-90,0,0));
         currentWeapon=instantiatedBody.GetComponent<Weapon>();
+
+        
+            CheckWeaponConsistency();
+        
 
         SpawnMagazine();
         SpawnScope();
@@ -313,16 +347,14 @@ public class WeaponGenerator : MonoBehaviour
                         if (currentWeapon.type == WeaponType.BULLPUP)
                         {
 
+                            //We test it twice because there are in the list two incompatible grips with bullpups
                             if (partsList[currentGripIndex].GetComponent<Grip>().type != GripType.SIMPLE)
                             {
-                                //Debug.Log("Shouldnt use this grip");
                                 currentGripIndex++;
                                 if (currentGripIndex > partsList.Count - 1) currentGripIndex = 0;
                             }
-
                             if (partsList[currentGripIndex].GetComponent<Grip>().type != GripType.SIMPLE)
                             {
-                                //Debug.Log("Shouldnt use this grip");
                                 currentGripIndex++;
                                 if (currentGripIndex > partsList.Count - 1) currentGripIndex = 0;
                             }
@@ -332,19 +364,21 @@ public class WeaponGenerator : MonoBehaviour
                         {
                             if(stockParts[currentStockIndex].GetComponent<Stock>().type == StockType.SIMPLE)
                             {
-                                if (partsList[currentGripIndex].GetComponent<Grip>().type == GripType.INTEGRATED)
-                                {
-                                    //Debug.Log("Shouldnt use this grip");
-                                    currentGripIndex++;
-                                    if (currentGripIndex > partsList.Count - 1) currentGripIndex = 0;
-                                }
-
+                                //If stock is simple we wont use the two first grips
                                 if (partsList[currentGripIndex].GetComponent<Grip>().type == GripType.HYBRID)
                                 {
-                                    //Debug.Log("Shouldnt use this grip");
+                                    Debug.Log("No deberia 1");
+
                                     currentGripIndex++;
                                     if (currentGripIndex > partsList.Count - 1) currentGripIndex = 0;
                                 }
+                                if (partsList[currentGripIndex].GetComponent<Grip>().type == GripType.INTEGRATED)
+                                {
+                                    Debug.Log("No deberia 2");
+                                    currentGripIndex++;
+                                    if (currentGripIndex > partsList.Count - 1) currentGripIndex = 0;
+                                }
+                                
                             }
                             //Cases for reduced and none stocks
                             else 
@@ -441,6 +475,14 @@ public class WeaponGenerator : MonoBehaviour
         {
             Destroy(currentStock);
             SpawnStock();
+        }
+    }
+    public void UpdateGrip()
+    {
+        if (currentGrip != null)
+        {
+            Destroy(currentGrip);
+            SpawnGrip();
         }
     }
     public void ChangeScope()

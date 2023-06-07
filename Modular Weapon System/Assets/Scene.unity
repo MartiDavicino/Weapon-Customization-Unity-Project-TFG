@@ -3340,6 +3340,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   customizationEnabled: 0
+  currentWeapon: {fileID: 0}
   bodyParts:
   - {fileID: 2919468284493898822, guid: 827e582d714fc3848930ba6f0db3fa0c, type: 3}
   - {fileID: 7706078158734306562, guid: ea4a531f7ceb06a429dbdad74b920fc3, type: 3}
@@ -3362,8 +3363,8 @@ MonoBehaviour:
   - {fileID: 6871014504249652921, guid: 0aeed1d370c4ed949bfb2b64adba7a23, type: 3}
   - {fileID: 228758856708280722, guid: ebbf50e2794b9504185cb4b1a0048296, type: 3}
   gripParts:
-  - {fileID: 6678665527297717834, guid: 8180e98209dabd4439348230ce31c85c, type: 3}
   - {fileID: 6985748634090333397, guid: 1edf57056802e56499091627c15c0885, type: 3}
+  - {fileID: 6678665527297717834, guid: 8180e98209dabd4439348230ce31c85c, type: 3}
   - {fileID: 8922283923652885062, guid: 976e6aa728b5b394f9e2d3cdbf298b74, type: 3}
   - {fileID: 653130784180003252, guid: cedb0c2b68c270943b4882907779b683, type: 3}
   - {fileID: 6496596030784484203, guid: 0cc09e387b603c5489122b136ff1b73e, type: 3}

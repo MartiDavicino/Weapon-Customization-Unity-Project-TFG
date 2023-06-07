@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 29845
+  controlID: 30069
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -46,8 +46,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 199.4
-    y: 19
+    x: 198.40001
+    y: 73.6
     width: 876.4
     height: 351.8
   m_ViewDataDictionary: {fileID: 0}
@@ -90,7 +90,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 29830
+  controlID: 30070
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -170,7 +170,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 29831
+  controlID: 30071
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -231,7 +231,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: d83ffdff66c60000
+      m_ExpandedIDs: 4addfdff5cddfdff94faffffc6720000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -566,17 +566,17 @@ MonoBehaviour:
       layout: 4
   m_WindowGUID: cc27987af1a868c49b0894db9c0f5429
   m_Gizmos: 1
-  m_OverrideSceneCullingMask: 0
-  m_SceneIsLit: 0
+  m_OverrideSceneCullingMask: 6917529027641081856
+  m_SceneIsLit: 1
   m_SceneLighting: 1
   m_2DMode: 0
   m_isRotationLocked: 0
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.83583, y: 0.42875087, z: -0.9476459}
+    m_Target: {x: 0.6150126, y: 0.02697946, z: -0.0000000037252903}
     speed: 2
-    m_Value: {x: 0.83583, y: 0.42875087, z: -0.9476459}
+    m_Value: {x: 0.6150126, y: 0.02697946, z: -0.0000000037252903}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -588,7 +588,7 @@ MonoBehaviour:
   m_SceneViewState:
     m_AlwaysRefresh: 0
     showFog: 1
-    showSkybox: 0
+    showSkybox: 1
     showFlares: 1
     showImageEffects: 1
     showParticleSystems: 1
@@ -623,13 +623,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.647
   m_Rotation:
-    m_Target: {x: 0, y: 1, z: 0, w: 0}
+    m_Target: {x: -0.07073889, y: 0.920323, z: -0.19702442, w: -0.33043128}
     speed: 2
-    m_Value: {x: 0, y: 1, z: 0, w: 0}
+    m_Value: {x: -0.07073882, y: 0.9203221, z: -0.19702423, w: -0.33043095}
   m_Size:
-    m_Target: 0.9600718
+    m_Target: 0.09029197
     speed: 2
-    m_Value: 0.9600718
+    m_Value: 0.09029197
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -678,7 +678,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 29767
+  controlID: 30034
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -945,13 +945,13 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs/Stock
+    - Assets/Prefabs/Grip
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 96
   m_LastFolders:
-  - Assets/Prefabs/Stock
+  - Assets/Prefabs/Grip
   m_LastFoldersGridSize: 96
   m_LastProjectPath: C:\Users\marti\Documents\GitHub\Weapon-Customization-Unity-Project-TFG\Modular
     Weapon System
@@ -959,8 +959,8 @@ MonoBehaviour:
     m_IsLocked: 1
   m_FolderTreeState:
     scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: c8790000
-    m_LastClickedID: 31176
+    m_SelectedIDs: be790000
+    m_LastClickedID: 31166
     m_ExpandedIDs: 00000000367900007e79000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1014,9 +1014,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 66c60000
-    m_LastClickedInstanceID: 50790
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs: de720000
+    m_LastClickedInstanceID: 29406
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: 
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1107,7 +1107,7 @@ MonoBehaviour:
     m_CachedPref: 160
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: 50790
+  m_LastInspectedObjectInstanceID: 29406
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
