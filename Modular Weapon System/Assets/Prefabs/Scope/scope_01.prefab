@@ -64,7 +64,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: -4973734387028869240, guid: ef840324fd722b84d8e8bf7be6048a6c, type: 3}
-  - {fileID: 8556262120643298411, guid: ef840324fd722b84d8e8bf7be6048a6c, type: 3}
+  - {fileID: 8556262120643298411, guid: 29e57c3f53e6e5f44af7a61aa0d0c595, type: 3}
   - {fileID: 2584612820320457568, guid: ef840324fd722b84d8e8bf7be6048a6c, type: 3}
   - {fileID: -3416491451232955410, guid: ef840324fd722b84d8e8bf7be6048a6c, type: 3}
   m_StaticBatchInfo:
@@ -102,7 +102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   partMaterials:
   - {fileID: -4973734387028869240, guid: ef840324fd722b84d8e8bf7be6048a6c, type: 3}
-  - {fileID: 8556262120643298411, guid: ef840324fd722b84d8e8bf7be6048a6c, type: 3}
+  - {fileID: 8556262120643298411, guid: 29e57c3f53e6e5f44af7a61aa0d0c595, type: 3}
   - {fileID: -3416491451232955410, guid: ef840324fd722b84d8e8bf7be6048a6c, type: 3}
   - {fileID: 2584612820320457568, guid: ef840324fd722b84d8e8bf7be6048a6c, type: 3}
 --- !u!64 &-2454866414738461327

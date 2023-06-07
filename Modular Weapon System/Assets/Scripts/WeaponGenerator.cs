@@ -22,9 +22,10 @@ public class WeaponGenerator : MonoBehaviour
     GameObject currentMagazine = null;
     GameObject currentGrip = null;
     GameObject currentForegrip = null;
-    public GameObject currentBarrel = null;
+
+    GameObject currentBarrel = null;
     GameObject currentHandguard = null;
-    public GameObject currentMuzzle = null;
+    GameObject currentMuzzle = null;
     GameObject currentScope = null;
 
 
@@ -326,6 +327,7 @@ public class WeaponGenerator : MonoBehaviour
                                 if (currentGripIndex > partsList.Count - 1) currentGripIndex = 0;
                             }
                         }
+                        //Non Bullpup cases
                         else 
                         {
                             if(stockParts[currentStockIndex].GetComponent<Stock>().type == StockType.SIMPLE)
@@ -344,7 +346,25 @@ public class WeaponGenerator : MonoBehaviour
                                     if (currentGripIndex > partsList.Count - 1) currentGripIndex = 0;
                                 }
                             }
-                        }
+                            //Cases for reduced and none stocks
+                            else 
+                            {
+                                if (partsList[currentGripIndex].GetComponent<Grip>().type == GripType.HYBRID)
+                                {
+                                    if (currentWeapon.type == WeaponType.UMP)
+                                    {
+                                        currentStockIndex = 1;
+                                        UpdateStock();  
+                                    }
+                                    else
+                                    {
+                                        currentGripIndex++;
+                                        if (currentGripIndex > partsList.Count - 1) currentGripIndex = 0;
+                                    }
+                                        
+                                }
+                            }
+                         }
                     }
                     
 
@@ -360,9 +380,23 @@ public class WeaponGenerator : MonoBehaviour
                 break;
             case WeaponPart.STOCK:
                 {
-                    currentStockIndex++;
-                    if (currentStockIndex > partsList.Count - 1) currentStockIndex = 0;
-                    index = currentStockIndex;
+                    if (gripParts[currentGripIndex].GetComponent<Grip>().type == GripType.SIMPLE)
+                    {
+                        currentStockIndex++;
+                        if (currentStockIndex > partsList.Count - 1) currentStockIndex = 0;
+                        index = currentStockIndex;
+                    }
+
+                    if (gripParts[currentGripIndex].GetComponent<Grip>().type == GripType.INTEGRATED)
+                    {
+                        if (currentStockIndex == 0) currentStockIndex = 1;
+                        else currentStockIndex = 0;
+                    }
+                    if (gripParts[currentGripIndex].GetComponent<Grip>().type == GripType.HYBRID)
+                    {
+                        Debug.Log("Dont do anything");
+                    }
+
                 }
                 break;
             case WeaponPart.HANDGUARD:
@@ -397,6 +431,14 @@ public class WeaponGenerator : MonoBehaviour
         if(currentStock != null)
         {
             GetNextIndexPart(WeaponPart.STOCK, stockParts);
+            Destroy(currentStock);
+            SpawnStock();
+        }
+    }
+    public void UpdateStock()
+    {
+        if (currentStock != null)
+        {
             Destroy(currentStock);
             SpawnStock();
         }

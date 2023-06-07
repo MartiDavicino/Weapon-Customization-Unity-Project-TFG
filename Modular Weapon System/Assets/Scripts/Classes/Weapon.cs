@@ -7,7 +7,7 @@ public enum WeaponType
 {
     NON_BULLPUP,
     BULLPUP,
-    LMG
+    UMP
     
 }
 public enum WeaponPart

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 262.11768, g: 324.74365, b: 429.81006, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -995,7 +995,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &432432460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3340,8 +3340,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   customizationEnabled: 0
-  currentBarrel: {fileID: 0}
-  currentMuzzle: {fileID: 0}
   bodyParts:
   - {fileID: 2919468284493898822, guid: 827e582d714fc3848930ba6f0db3fa0c, type: 3}
   - {fileID: 7706078158734306562, guid: ea4a531f7ceb06a429dbdad74b920fc3, type: 3}
@@ -3351,12 +3349,13 @@ MonoBehaviour:
   - {fileID: 7538934421841909265, guid: b8af2e03b2611174281a86a2ecf49f28, type: 3}
   stockParts:
   - {fileID: 5435392921684663719, guid: 2e2918e6f820a144f8c622306d0ea966, type: 3}
+  - {fileID: 7355848478565799881, guid: 79c273a9d0a29194e811bb1b64f6e943, type: 3}
   - {fileID: 1588183511583936012, guid: 3e37e21b8dfdd13439acc22eee76002f, type: 3}
   - {fileID: 3246103336374668395, guid: ccf80446acd2f984dba9a0c6879b72da, type: 3}
   - {fileID: 3768369746654883829, guid: 6e950683d38ba744e9a8c06734acff94, type: 3}
   - {fileID: 54087113560955004, guid: 6a1862f854618f04e829b8363b9be6e2, type: 3}
   magazineParts:
-  - {fileID: 7426202867535681608, guid: 24963de6614b40d4689a08eb8e15ccd9, type: 3}
+  - {fileID: 1984459877789969434, guid: b017786f4cc83bb4789e0e2d0a08d133, type: 3}
   - {fileID: 8896044568197678170, guid: fe7d26635b0f00540a79d9bcc9e216a1, type: 3}
   - {fileID: 7078202611255679084, guid: 58b77ede956dce9438ca024ce129cced, type: 3}
   - {fileID: 5641237118825369099, guid: a0ffb03113162564981c26f58bf688a6, type: 3}
