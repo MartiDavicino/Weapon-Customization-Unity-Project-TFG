@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 2324708162910850992}
   - component: {fileID: 1723997212533293077}
   - component: {fileID: 3461061519454729439}
-  - component: {fileID: 5689486555939685458}
-  - component: {fileID: -1095442297822335555}
+  - component: {fileID: -1874434018432475364}
+  - component: {fileID: -7693427210617028595}
   m_Layer: 0
   m_Name: muzzle_04
   m_TagString: Muzzle
@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -4973734387028869240, guid: 6dd66df73cb5c7440b40edb5f080a68a, type: 3}
+  - {fileID: 2100000, guid: 44732034b2a8abc46a5d471b850954dd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -85,7 +85,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &5689486555939685458
+--- !u!64 &-1874434018432475364
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -99,7 +99,7 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 1446200243280803077, guid: 6dd66df73cb5c7440b40edb5f080a68a, type: 3}
---- !u!114 &-1095442297822335555
+--- !u!114 &-7693427210617028595
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -112,4 +112,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   partMaterials:
-  - {fileID: -4973734387028869240, guid: 6dd66df73cb5c7440b40edb5f080a68a, type: 3}
+  - {fileID: 2100000, guid: 44732034b2a8abc46a5d471b850954dd, type: 2}

@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 200920362220477092}
   - component: {fileID: 3847775661989319937}
   - component: {fileID: 1333906469771583947}
-  - component: {fileID: 1249307351489648826}
-  - component: {fileID: 4092090547667488274}
+  - component: {fileID: 6009982602506181682}
+  - component: {fileID: 7439557732673759879}
   m_Layer: 0
   m_Name: scope_06
   m_TagString: Scope
@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 685110839983407134}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -0.8838807, y: -0.6812154, z: 0.047271617}
+  m_LocalPosition: {x: -0.87542266, y: -0.81233716, z: 0.01977838}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -4973734387028869240, guid: 744ef9ab49bd2b6479a48296be70e5fe, type: 3}
+  - {fileID: 2100000, guid: 4c05a4ed02e7e654aa305c850ab993e6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -85,7 +85,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1249307351489648826
+--- !u!114 &6009982602506181682
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -98,8 +98,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   partMaterials:
-  - {fileID: -4973734387028869240, guid: 744ef9ab49bd2b6479a48296be70e5fe, type: 3}
---- !u!65 &4092090547667488274
+  - {fileID: 2100000, guid: 4c05a4ed02e7e654aa305c850ab993e6, type: 2}
+--- !u!65 &7439557732673759879
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -111,4 +111,4 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.0013119244, y: 0.00082157523, z: 0.0020550885}
-  m_Center: {x: -0.00000003905734, y: 0.00016485139, z: 0.0009732463}
+  m_Center: {x: 0.0000073185656, y: -0.00011008091, z: 0.00097614067}

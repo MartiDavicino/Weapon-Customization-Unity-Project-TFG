@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4622859980798169055
+--- !u!1 &4645020288652031382
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,7 +8,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4711625220814274699}
+  - component: {fileID: 5794327820701224152}
   m_Layer: 0
   m_Name: Muzzle Socket
   m_TagString: Untagged
@@ -16,16 +16,16 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4711625220814274699
+--- !u!4 &5794327820701224152
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4622859980798169055}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.01002, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_GameObject: {fileID: 4645020288652031382}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: 0, w: 0.7071067}
+  m_LocalPosition: {x: -0.00995, y: 0, z: 0}
+  m_LocalScale: {x: 0.01, y: 0.010000002, z: 0.010000002}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4860438753205126670}
@@ -42,9 +42,9 @@ GameObject:
   - component: {fileID: 4860438753205126670}
   - component: {fileID: 8420716308447529387}
   - component: {fileID: 5996705184708459873}
-  - component: {fileID: 7241324910808281249}
-  - component: {fileID: 3667284359703498536}
-  - component: {fileID: 6410536661454442851}
+  - component: {fileID: -683886762543576037}
+  - component: {fileID: 7736392134086702788}
+  - component: {fileID: -7487104334092002962}
   m_Layer: 0
   m_Name: barrel_01
   m_TagString: Barrel
@@ -64,7 +64,7 @@ Transform:
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 4711625220814274699}
+  - {fileID: 5794327820701224152}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -96,7 +96,7 @@ MeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -4973734387028869240, guid: a9a5843f8ecd2f34fb757b986f0cb616, type: 3}
+  - {fileID: 2100000, guid: cf1fa134d6502384e8954381553e5917, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -118,7 +118,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &7241324910808281249
+--- !u!114 &-683886762543576037
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -130,22 +130,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383d9aa1a0d6c88429e1c3f1979e70a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  muzzleSocket: {fileID: 4711625220814274699}
---- !u!114 &3667284359703498536
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5204032410641358004}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad81cd663e2ad6942a991f66fb68f927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  partMaterials:
-  - {fileID: -4973734387028869240, guid: a9a5843f8ecd2f34fb757b986f0cb616, type: 3}
---- !u!64 &6410536661454442851
+  muzzleSocket: {fileID: 5794327820701224152}
+--- !u!64 &7736392134086702788
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -159,3 +145,17 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 2406721179580109264, guid: a9a5843f8ecd2f34fb757b986f0cb616, type: 3}
+--- !u!114 &-7487104334092002962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5204032410641358004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad81cd663e2ad6942a991f66fb68f927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  partMaterials:
+  - {fileID: 2100000, guid: cf1fa134d6502384e8954381553e5917, type: 2}

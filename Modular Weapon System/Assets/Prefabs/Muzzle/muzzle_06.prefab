@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 5109123562997479673}
   - component: {fileID: 8162945139351091036}
   - component: {fileID: 6245485612151145366}
-  - component: {fileID: 6876003986981405688}
-  - component: {fileID: -8123218243069200869}
+  - component: {fileID: -6887270228778794999}
+  - component: {fileID: 2649340085073518721}
   m_Layer: 0
   m_Name: muzzle_06
   m_TagString: Muzzle
@@ -28,8 +28,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5597007192675492419}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -2.1691284, y: -0.9777871, z: 0.023891602}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalPosition: {x: -2.141698, y: -1.0322037, z: 0.023739962}
+  m_LocalScale: {x: 96.313385, y: 96.313385, z: 96.313385}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -4973734387028869240, guid: 8299af12d99d43f4faf94aa8d6d43776, type: 3}
+  - {fileID: 2100000, guid: 4c05a4ed02e7e654aa305c850ab993e6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -85,7 +85,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6876003986981405688
+--- !u!64 &-6887270228778794999
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -99,7 +99,7 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -552194494506009864, guid: 8299af12d99d43f4faf94aa8d6d43776, type: 3}
---- !u!114 &-8123218243069200869
+--- !u!114 &2649340085073518721
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -112,4 +112,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   partMaterials:
-  - {fileID: -4973734387028869240, guid: 8299af12d99d43f4faf94aa8d6d43776, type: 3}
+  - {fileID: 2100000, guid: 4c05a4ed02e7e654aa305c850ab993e6, type: 2}

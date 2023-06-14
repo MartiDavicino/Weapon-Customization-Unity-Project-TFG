@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 4518122959744576391}
   - component: {fileID: 656473800800707618}
   - component: {fileID: 3384653274711019752}
-  - component: {fileID: 5871032794607402520}
-  - component: {fileID: 1759175048809506718}
+  - component: {fileID: 4566397186330694857}
+  - component: {fileID: -2883665617906736228}
   m_Layer: 0
   m_Name: muzzle_03
   m_TagString: Muzzle
@@ -27,8 +27,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3888937753545339197}
-  m_LocalRotation: {x: -0.7071068, y: -4.2557444e-36, z: -4.2557448e-36, w: 0.7071067}
-  m_LocalPosition: {x: 2.2130568, y: 0.9852656, z: -0.007909323}
+  m_LocalRotation: {x: -0.7071066, y: -0.00000066732764, z: -0.000000552125, w: 0.70710695}
+  m_LocalPosition: {x: 2.2130568, y: 0.9852653, z: -0.007910471}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -4973734387028869240, guid: 3b124f1f5d89c104c927f325788c3dd5, type: 3}
+  - {fileID: 2100000, guid: c236b4cbf6cfeeb4eadde770c2bffb94, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -85,7 +85,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &5871032794607402520
+--- !u!64 &4566397186330694857
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -99,7 +99,7 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5014901743460754363, guid: 3b124f1f5d89c104c927f325788c3dd5, type: 3}
---- !u!114 &1759175048809506718
+--- !u!114 &-2883665617906736228
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -112,4 +112,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   partMaterials:
-  - {fileID: -4973734387028869240, guid: 3b124f1f5d89c104c927f325788c3dd5, type: 3}
+  - {fileID: 2100000, guid: c236b4cbf6cfeeb4eadde770c2bffb94, type: 2}

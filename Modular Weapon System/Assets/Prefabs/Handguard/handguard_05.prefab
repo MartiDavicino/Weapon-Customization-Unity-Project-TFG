@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4287047723250309695
+--- !u!1 &212606414606989271
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,7 +8,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2171158269369369601}
+  - component: {fileID: 4711199765649861319}
   m_Layer: 0
   m_Name: Barrel Socket
   m_TagString: Untagged
@@ -16,15 +16,15 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2171158269369369601
+--- !u!4 &4711199765649861319
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4287047723250309695}
+  m_GameObject: {fileID: 212606414606989271}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.00732, y: -0, z: 0.00048}
+  m_LocalPosition: {x: -0.00739, y: 0, z: 0.00032}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -42,9 +42,9 @@ GameObject:
   - component: {fileID: 6216300307365428786}
   - component: {fileID: 7055847199366050199}
   - component: {fileID: 5048413055318558045}
-  - component: {fileID: 723939350420160580}
-  - component: {fileID: -8332947342406854875}
-  - component: {fileID: 4911705626900590273}
+  - component: {fileID: 9041660284070838705}
+  - component: {fileID: -7627674572925138632}
+  - component: {fileID: -6392766268408967017}
   m_Layer: 0
   m_Name: handguard_05
   m_TagString: Handguard
@@ -60,11 +60,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6705697792533898376}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: 2.9872, y: -1.0555, z: -0.014971}
-  m_LocalScale: {x: 97.348, y: 97.348, z: 97.348}
+  m_LocalPosition: {x: 2.9972298, y: -1.0485344, z: -0.014970995}
+  m_LocalScale: {x: 95.78949, y: 95.78949, z: 95.78949}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2171158269369369601}
+  - {fileID: 4711199765649861319}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -96,8 +96,7 @@ MeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -1444460858095362738, guid: 8348fcdbc8c560f44bfe737b8fd2ab0a, type: 3}
-  - {fileID: -4973734387028869240, guid: 8348fcdbc8c560f44bfe737b8fd2ab0a, type: 3}
+  - {fileID: 2100000, guid: 18eab64cd9128d340aa7d1e9836399f0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -119,35 +118,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &723939350420160580
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6705697792533898376}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f29c7a14b346ca94cbdb9bf121d5da71, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  barrelSocket: {fileID: 2171158269369369601}
---- !u!114 &-8332947342406854875
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6705697792533898376}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad81cd663e2ad6942a991f66fb68f927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  partMaterials:
-  - {fileID: -1444460858095362738, guid: 8348fcdbc8c560f44bfe737b8fd2ab0a, type: 3}
-  - {fileID: -4973734387028869240, guid: 8348fcdbc8c560f44bfe737b8fd2ab0a, type: 3}
---- !u!64 &4911705626900590273
+--- !u!64 &9041660284070838705
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -161,3 +132,30 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -2850074755327657584, guid: 8348fcdbc8c560f44bfe737b8fd2ab0a, type: 3}
+--- !u!114 &-7627674572925138632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6705697792533898376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad81cd663e2ad6942a991f66fb68f927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  partMaterials:
+  - {fileID: 2100000, guid: 18eab64cd9128d340aa7d1e9836399f0, type: 2}
+--- !u!114 &-6392766268408967017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6705697792533898376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f29c7a14b346ca94cbdb9bf121d5da71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  barrelSocket: {fileID: 4711199765649861319}

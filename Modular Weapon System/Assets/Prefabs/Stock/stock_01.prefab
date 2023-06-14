@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 4622300415602427677}
   - component: {fileID: 8613818362542196920}
   - component: {fileID: 5795738409158868082}
-  - component: {fileID: -2046292822386239950}
-  - component: {fileID: -4927917525945128883}
-  - component: {fileID: -469615368464938559}
+  - component: {fileID: 6064126122224405653}
+  - component: {fileID: 7469447297595027686}
+  - component: {fileID: 5331247597936315495}
   m_Layer: 0
   m_Name: stock_01
   m_TagString: Stock
@@ -64,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -4973734387028869240, guid: 5c9a99a010a7721488a63e8eea52c630, type: 3}
+  - {fileID: 2100000, guid: cf1fa134d6502384e8954381553e5917, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -86,21 +86,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &-2046292822386239950
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5435392921684663719}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad81cd663e2ad6942a991f66fb68f927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  partMaterials:
-  - {fileID: -4973734387028869240, guid: 5c9a99a010a7721488a63e8eea52c630, type: 3}
---- !u!64 &-4927917525945128883
+--- !u!64 &6064126122224405653
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -114,7 +100,20 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 6405055333489277325, guid: 5c9a99a010a7721488a63e8eea52c630, type: 3}
---- !u!114 &-469615368464938559
+--- !u!114 &7469447297595027686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5435392921684663719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad81cd663e2ad6942a991f66fb68f927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  partMaterials: []
+--- !u!114 &5331247597936315495
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

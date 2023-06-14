@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 7499369285420748222}
   - component: {fileID: 6898607759654486555}
   - component: {fileID: 8671734396281517777}
-  - component: {fileID: -9185794213265520223}
-  - component: {fileID: 9105508655653581277}
+  - component: {fileID: 4035147656378402101}
+  - component: {fileID: 4813433020657176871}
   m_Layer: 0
   m_Name: scope_02
   m_TagString: Scope
@@ -63,8 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -4973734387028869240, guid: 8d53cfee8aecc6749bc916426959fdac, type: 3}
-  - {fileID: 8556262120643298411, guid: 8d53cfee8aecc6749bc916426959fdac, type: 3}
+  - {fileID: 2100000, guid: 6b439f0539db0d74f8e746c530e2f1dd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -86,7 +85,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &-9185794213265520223
+--- !u!114 &4035147656378402101
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -99,9 +98,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   partMaterials:
-  - {fileID: -4973734387028869240, guid: 8d53cfee8aecc6749bc916426959fdac, type: 3}
-  - {fileID: 8556262120643298411, guid: 8d53cfee8aecc6749bc916426959fdac, type: 3}
---- !u!64 &9105508655653581277
+  - {fileID: 2100000, guid: 6b439f0539db0d74f8e746c530e2f1dd, type: 2}
+--- !u!64 &4813433020657176871
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 1584090311841025212}
   - component: {fileID: 2473613278075618073}
   - component: {fileID: 410106164604565459}
-  - component: {fileID: 5375942053228619155}
-  - component: {fileID: -2864406196680376051}
+  - component: {fileID: -7800544382662877659}
+  - component: {fileID: 6007090588628495540}
   m_Layer: 0
   m_Name: scope_05
   m_TagString: Scope
@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2211268595803772422}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: 3.495765, y: -0.8338011, z: -0.01698347}
+  m_LocalPosition: {x: 3.3821602, y: -0.78847396, z: -0.016983462}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -63,8 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -4973734387028869240, guid: 40ea58402748ffa4898a81e0f6fa0303, type: 3}
-  - {fileID: 8556262120643298411, guid: 40ea58402748ffa4898a81e0f6fa0303, type: 3}
+  - {fileID: 2100000, guid: 18eab64cd9128d340aa7d1e9836399f0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -86,7 +85,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &5375942053228619155
+--- !u!114 &-7800544382662877659
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -99,9 +98,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   partMaterials:
-  - {fileID: -4973734387028869240, guid: 40ea58402748ffa4898a81e0f6fa0303, type: 3}
-  - {fileID: 8556262120643298411, guid: 40ea58402748ffa4898a81e0f6fa0303, type: 3}
---- !u!64 &-2864406196680376051
+  - {fileID: 2100000, guid: 18eab64cd9128d340aa7d1e9836399f0, type: 2}
+--- !u!64 &6007090588628495540
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

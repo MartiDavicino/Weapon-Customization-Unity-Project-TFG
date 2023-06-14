@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 3002897212729895067}
   - component: {fileID: 2162770774954977086}
   - component: {fileID: 4172378099374707700}
-  - component: {fileID: 85156791081523138}
-  - component: {fileID: 1500074804095549199}
-  - component: {fileID: -3761800921081798540}
+  - component: {fileID: -7635388295576801758}
+  - component: {fileID: -1750560452788579721}
+  - component: {fileID: 1043194659019617446}
   m_Layer: 0
   m_Name: handguard_04
   m_TagString: Handguard
@@ -29,11 +29,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2515189706513642017}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -1.3696204, y: 1.0733371, z: -0.0044472134}
+  m_LocalPosition: {x: -1.4773806, y: 1.0733371, z: -0.0044472134}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1287774531983001737}
+  - {fileID: 4218312653050402256}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -65,8 +65,7 @@ MeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -1444460858095362738, guid: aff07771062e62848980fff9d3550362, type: 3}
-  - {fileID: -4973734387028869240, guid: aff07771062e62848980fff9d3550362, type: 3}
+  - {fileID: 2100000, guid: 44732034b2a8abc46a5d471b850954dd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -88,35 +87,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &85156791081523138
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2515189706513642017}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f29c7a14b346ca94cbdb9bf121d5da71, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  barrelSocket: {fileID: 1287774531983001737}
---- !u!114 &1500074804095549199
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2515189706513642017}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad81cd663e2ad6942a991f66fb68f927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  partMaterials:
-  - {fileID: -1444460858095362738, guid: aff07771062e62848980fff9d3550362, type: 3}
-  - {fileID: -4973734387028869240, guid: aff07771062e62848980fff9d3550362, type: 3}
---- !u!64 &-3761800921081798540
+--- !u!64 &-7635388295576801758
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -130,7 +101,34 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -2228417370725966487, guid: aff07771062e62848980fff9d3550362, type: 3}
---- !u!1 &6609205674898078773
+--- !u!114 &-1750560452788579721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2515189706513642017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad81cd663e2ad6942a991f66fb68f927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  partMaterials:
+  - {fileID: 2100000, guid: 44732034b2a8abc46a5d471b850954dd, type: 2}
+--- !u!114 &1043194659019617446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2515189706513642017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f29c7a14b346ca94cbdb9bf121d5da71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  barrelSocket: {fileID: 4218312653050402256}
+--- !u!1 &5765757131049984193
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -138,7 +136,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1287774531983001737}
+  - component: {fileID: 4218312653050402256}
   m_Layer: 0
   m_Name: Barrel Socket
   m_TagString: Untagged
@@ -146,15 +144,15 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1287774531983001737
+--- !u!4 &4218312653050402256
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6609205674898078773}
+  m_GameObject: {fileID: 5765757131049984193}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.00645, y: -0, z: 0.0002}
+  m_LocalPosition: {x: -0.00645, y: 0, z: 0.00032}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

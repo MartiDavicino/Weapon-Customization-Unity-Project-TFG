@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 6057746003378514947}
   - component: {fileID: 7187380449682138022}
   - component: {fileID: 4925323057309210476}
-  - component: {fileID: -4984451930547878655}
-  - component: {fileID: 9067282603067314780}
+  - component: {fileID: -9006708565669499617}
+  - component: {fileID: 7173568645592481811}
   m_Layer: 0
   m_Name: magazine_05
   m_TagString: Magazine
@@ -63,8 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -3416491451232955410, guid: e9f0d4fa35a07484dac161cdfdc9898f, type: 3}
-  - {fileID: -4973734387028869240, guid: e9f0d4fa35a07484dac161cdfdc9898f, type: 3}
+  - {fileID: 2100000, guid: 18eab64cd9128d340aa7d1e9836399f0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -86,7 +85,21 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &-4984451930547878655
+--- !u!114 &-9006708565669499617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6871014504249652921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad81cd663e2ad6942a991f66fb68f927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  partMaterials:
+  - {fileID: 2100000, guid: 18eab64cd9128d340aa7d1e9836399f0, type: 2}
+--- !u!64 &7173568645592481811
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -100,18 +113,3 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -8452306129037006184, guid: e9f0d4fa35a07484dac161cdfdc9898f, type: 3}
---- !u!114 &9067282603067314780
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6871014504249652921}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad81cd663e2ad6942a991f66fb68f927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  partMaterials:
-  - {fileID: -3416491451232955410, guid: e9f0d4fa35a07484dac161cdfdc9898f, type: 3}
-  - {fileID: -4973734387028869240, guid: e9f0d4fa35a07484dac161cdfdc9898f, type: 3}

@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   partMaterials:
-  - {fileID: -4973734387028869240, guid: 8348fcdbc8c560f44bfe737b8fd2ab0a, type: 3}
+  - {fileID: 2100000, guid: cf1fa134d6502384e8954381553e5917, type: 2}
 --- !u!65 &334068102539827097
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 3741417564610485806}
   - component: {fileID: 307358472449347979}
   - component: {fileID: 2569026162912929089}
-  - component: {fileID: 3002317179620857463}
-  - component: {fileID: 9123191126684932241}
+  - component: {fileID: 8996195673280344227}
+  - component: {fileID: 2620015515591516549}
   m_Layer: 0
   m_Name: scope_04
   m_TagString: Scope
@@ -28,8 +28,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4082512921109955732}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -0.9870366, y: 1.2786499, z: -0.05164103}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalPosition: {x: -0.9870366, y: 1.2940557, z: -0.028532228}
+  m_LocalScale: {x: 91.81134, y: 91.81134, z: 91.81134}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -63,9 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -4973734387028869240, guid: 29e57c3f53e6e5f44af7a61aa0d0c595, type: 3}
-  - {fileID: 8556262120643298411, guid: 29e57c3f53e6e5f44af7a61aa0d0c595, type: 3}
-  - {fileID: -3416491451232955410, guid: 29e57c3f53e6e5f44af7a61aa0d0c595, type: 3}
+  - {fileID: 2100000, guid: 44732034b2a8abc46a5d471b850954dd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -87,7 +85,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &3002317179620857463
+--- !u!114 &8996195673280344227
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -100,10 +98,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   partMaterials:
-  - {fileID: -4973734387028869240, guid: 29e57c3f53e6e5f44af7a61aa0d0c595, type: 3}
-  - {fileID: -3416491451232955410, guid: 29e57c3f53e6e5f44af7a61aa0d0c595, type: 3}
-  - {fileID: 8556262120643298411, guid: 29e57c3f53e6e5f44af7a61aa0d0c595, type: 3}
---- !u!64 &9123191126684932241
+  - {fileID: 2100000, guid: 44732034b2a8abc46a5d471b850954dd, type: 2}
+--- !u!64 &2620015515591516549
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

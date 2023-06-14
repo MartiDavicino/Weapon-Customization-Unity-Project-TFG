@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 8113658420054352124}
   - component: {fileID: 5131388662256070489}
   - component: {fileID: 6976829559361346451}
-  - component: {fileID: 7547381063764194108}
-  - component: {fileID: -8429311505554395841}
-  - component: {fileID: -309070845367721044}
+  - component: {fileID: -3099970366846795731}
+  - component: {fileID: 1002189398484499284}
+  - component: {fileID: 2995326710847088597}
   m_Layer: 0
   m_Name: grip_03
   m_TagString: Grip
@@ -64,8 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -4973734387028869240, guid: 68d5ebf97df40d3459377cbf18f91a33, type: 3}
-  - {fileID: -1444460858095362738, guid: 68d5ebf97df40d3459377cbf18f91a33, type: 3}
+  - {fileID: 2100000, guid: c236b4cbf6cfeeb4eadde770c2bffb94, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -87,20 +86,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &7547381063764194108
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8922283923652885062}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f032aa40fd8f6914986f237e99eeac04, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 0
---- !u!64 &-8429311505554395841
+--- !u!64 &-3099970366846795731
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -114,7 +100,20 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -7794139723600247275, guid: 68d5ebf97df40d3459377cbf18f91a33, type: 3}
---- !u!114 &-309070845367721044
+--- !u!114 &1002189398484499284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8922283923652885062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f032aa40fd8f6914986f237e99eeac04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
+--- !u!114 &2995326710847088597
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -127,5 +126,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   partMaterials:
-  - {fileID: -4973734387028869240, guid: 68d5ebf97df40d3459377cbf18f91a33, type: 3}
-  - {fileID: -1444460858095362738, guid: 68d5ebf97df40d3459377cbf18f91a33, type: 3}
+  - {fileID: 2100000, guid: c236b4cbf6cfeeb4eadde770c2bffb94, type: 2}

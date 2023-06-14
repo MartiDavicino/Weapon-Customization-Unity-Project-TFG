@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 3143541314459028887}
   - component: {fileID: 2022047783243432498}
   - component: {fileID: 4317605103139272440}
-  - component: {fileID: 6756833494346987895}
-  - component: {fileID: -3054657788004512358}
-  - component: {fileID: 6990247364879173547}
+  - component: {fileID: 2884443923938545973}
+  - component: {fileID: 6973303765592617322}
+  - component: {fileID: 1576507577903026006}
   m_Layer: 0
   m_Name: barrel_05
   m_TagString: Barrel
@@ -29,11 +29,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2372212309971441453}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: 1.8335671, y: -1.0403718, z: -0.014709095}
+  m_LocalPosition: {x: 2.2800674, y: -1.0188786, z: -0.014709095}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 8392100797625009761}
+  - {fileID: 2002046343233280083}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -65,7 +65,7 @@ MeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -4973734387028869240, guid: 8a021c92438f8a64684d4a34350273fe, type: 3}
+  - {fileID: 2100000, guid: 18eab64cd9128d340aa7d1e9836399f0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -87,7 +87,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &6756833494346987895
+--- !u!114 &2884443923938545973
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -99,22 +99,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383d9aa1a0d6c88429e1c3f1979e70a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  muzzleSocket: {fileID: 8392100797625009761}
---- !u!114 &-3054657788004512358
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2372212309971441453}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad81cd663e2ad6942a991f66fb68f927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  partMaterials:
-  - {fileID: -4973734387028869240, guid: 8a021c92438f8a64684d4a34350273fe, type: 3}
---- !u!64 &6990247364879173547
+  muzzleSocket: {fileID: 2002046343233280083}
+--- !u!64 &6973303765592617322
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -128,7 +114,21 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5616087892306231479, guid: 8a021c92438f8a64684d4a34350273fe, type: 3}
---- !u!1 &8312799225524546291
+--- !u!114 &1576507577903026006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2372212309971441453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad81cd663e2ad6942a991f66fb68f927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  partMaterials:
+  - {fileID: 2100000, guid: 18eab64cd9128d340aa7d1e9836399f0, type: 2}
+--- !u!1 &3522029536410196916
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -136,7 +136,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8392100797625009761}
+  - component: {fileID: 2002046343233280083}
   m_Layer: 0
   m_Name: Muzzle Socket
   m_TagString: Untagged
@@ -144,15 +144,15 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8392100797625009761
+--- !u!4 &2002046343233280083
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8312799225524546291}
+  m_GameObject: {fileID: 3522029536410196916}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.00644, y: 0, z: -0.00047}
+  m_LocalPosition: {x: -0.00648, y: 0, z: -0.00047}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

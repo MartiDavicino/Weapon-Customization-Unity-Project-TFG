@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1857103936157846530
+--- !u!1 &3623252955362125471
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,7 +8,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7959019609860896081}
+  - component: {fileID: 7357316789344755344}
   m_Layer: 0
   m_Name: Muzzle Socket
   m_TagString: Untagged
@@ -16,15 +16,15 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7959019609860896081
+--- !u!4 &7357316789344755344
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1857103936157846530}
+  m_GameObject: {fileID: 3623252955362125471}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.00629, y: 0, z: -0.00026}
+  m_LocalPosition: {x: -0.00627, y: 0, z: -0.00025}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -42,9 +42,9 @@ GameObject:
   - component: {fileID: 7569296764454143019}
   - component: {fileID: 6819664628327549838}
   - component: {fileID: 8737167518324653892}
-  - component: {fileID: -8917267140325935827}
-  - component: {fileID: -5809163326712750863}
-  - component: {fileID: -5740017082181233970}
+  - component: {fileID: -7732967385412301355}
+  - component: {fileID: -1198841380609927315}
+  - component: {fileID: 4786944031541668436}
   m_Layer: 0
   m_Name: barrel_04
   m_TagString: Barrel
@@ -64,7 +64,7 @@ Transform:
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 7959019609860896081}
+  - {fileID: 7357316789344755344}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -96,7 +96,7 @@ MeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -4973734387028869240, guid: c0b782f27a303bb49bfd60eb7659ba29, type: 3}
+  - {fileID: 2100000, guid: 44732034b2a8abc46a5d471b850954dd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -118,7 +118,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &-8917267140325935827
+--- !u!114 &-7732967385412301355
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -130,22 +130,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383d9aa1a0d6c88429e1c3f1979e70a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  muzzleSocket: {fileID: 7959019609860896081}
---- !u!114 &-5809163326712750863
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7079759637066407569}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad81cd663e2ad6942a991f66fb68f927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  partMaterials:
-  - {fileID: -4973734387028869240, guid: c0b782f27a303bb49bfd60eb7659ba29, type: 3}
---- !u!64 &-5740017082181233970
+  muzzleSocket: {fileID: 7357316789344755344}
+--- !u!64 &-1198841380609927315
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -159,3 +145,17 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 5665763164275481281, guid: c0b782f27a303bb49bfd60eb7659ba29, type: 3}
+--- !u!114 &4786944031541668436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7079759637066407569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad81cd663e2ad6942a991f66fb68f927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  partMaterials:
+  - {fileID: 2100000, guid: 44732034b2a8abc46a5d471b850954dd, type: 2}
