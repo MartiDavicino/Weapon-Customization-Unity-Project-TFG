@@ -8,7 +8,10 @@ public class SelectablePart : MonoBehaviour
     CameraController cameraController;
     WeaponGenerator weaponGenerator;
     public List<Material> partMaterials;
+
     private Color highlightColor;
+    private Material highlightMat;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +30,8 @@ public class SelectablePart : MonoBehaviour
 
         highlightColor=new Color(0,0.2f,1);
 
+        highlightMat=GameObject.Find("Highlight Object").GetComponent<Renderer>().material;
+        if (highlightMat == null) Debug.Log("could find mat");
     }
 
     // Update is called once per frame
@@ -44,19 +49,16 @@ public class SelectablePart : MonoBehaviour
             {
                 for(int i=0; i<renderer.materials.Length;i++)
                 {
-                    renderer.materials[i].color = highlightColor;
+                    //renderer.materials[i].color = highlightColor;
 
+                    renderer.material = highlightMat;
                 }
 
 
             }
         }
 
-        //if (cameraController.isOrbiting)
-        //{
-        //    renderer.material.color = Color.white;
-
-        //}
+        
     }
     private void OnMouseOver()
     {
@@ -103,7 +105,9 @@ public class SelectablePart : MonoBehaviour
 
         for (int i = 0; i < renderer.materials.Length; i++)
         {
-            renderer.materials[i].color = partMaterials[i].color;
+            //renderer.materials[i].color = partMaterials[i].color;
+
+            renderer.material = partMaterials[i];
         }
     }
 }

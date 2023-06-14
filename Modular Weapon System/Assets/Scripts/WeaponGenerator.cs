@@ -362,11 +362,9 @@ public class WeaponGenerator : MonoBehaviour
                         //Non Bullpup cases
                         else 
                         {
-                            Debug.Log("No llego");
 
                             if (stockParts[currentStockIndex].GetComponent<Stock>().type == StockType.SIMPLE)
                             {
-                                Debug.Log("Me estoy estancando");
 
                                 //If stock is simple we wont use the two first grips
                                 if (partsList[currentGripIndex].GetComponent<Grip>().type == GripType.HYBRID)
